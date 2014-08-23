@@ -1,5 +1,5 @@
 ﻿using FarseerPhysics.Dynamics;
-using FarseerPhysics.Factories;
+using LudumDare.Json;
 using Microsoft.Xna.Framework;
 using Newtonsoft.Json;
 using SFML.Graphics;
@@ -7,12 +7,9 @@ using SFML.Window;
 using sfml_ui;
 using sfml_ui.Controls;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LudumDare
 {

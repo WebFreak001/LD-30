@@ -3,10 +3,8 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 
-namespace LudumDare
+namespace LudumDare.Json
 {
     public class SceneSerializer
     {

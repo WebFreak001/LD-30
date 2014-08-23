@@ -68,25 +68,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DisplayShape.cs" />
+    <Compile Include="Json\ColliderCategory.cs" />
+    <Compile Include="Json\DisplayShape.cs" />
     <Compile Include="Game.cs" />
-    <Compile Include="GameScene.cs" />
+    <Compile Include="Json\GameScene.cs" />
     <Compile Include="GameView\Views\InGameView.cs" />
     <Compile Include="InputTest.cs" />
     <Compile Include="LevelEditor.cs" />
     <Compile Include="ParticleSystem\Emitter.cs" />
     <Compile Include="ParticleSystem\IndexedParticleSystem.cs" />
     <Compile Include="ParticleSystem\Particle.cs" />
-    <Compile Include="PhysicsShape.cs" />
-    <Compile Include="Point.cs" />
+    <Compile Include="Json\PhysicsShape.cs" />
+    <Compile Include="Physics\BodyEx.cs" />
+    <Compile Include="Physics\PhysicsWorld.cs" />
+    <Compile Include="Json\Point.cs" />
+    <Compile Include="Physics\Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RenderBody.cs" />
-    <Compile Include="SceneDeserializer.cs" />
-    <Compile Include="SceneLoader.cs" />
-    <Compile Include="SceneObject.cs" />
+    <Compile Include="Json\SceneDeserializer.cs" />
+    <Compile Include="Json\SceneLoader.cs" />
+    <Compile Include="Json\SceneObject.cs" />
     <Compile Include="SceneRenderer.cs" />
-    <Compile Include="SceneSerializer.cs" />
+    <Compile Include="Json\SceneSerializer.cs" />
     <Compile Include="SceneTest.cs" />
     <Compile Include="GameView\IGameView.cs" />
     <Compile Include="GameView\Views\MainMenuView.cs" />
@@ -94,6 +98,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -4,10 +4,6 @@ using SFML.Window;
 using sfml_ui;
 using sfml_ui.Controls;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LudumDare.GameView.Views
 {
@@ -24,7 +20,7 @@ namespace LudumDare.GameView.Views
         private Emitter greenEmitter;
         private float Time;
         private RenderTexture particleTexture;
-        private RectangleShape bg;
+        private Sprite bg;
 
         public MainMenuView()
         {
@@ -76,7 +72,7 @@ namespace LudumDare.GameView.Views
             greenEmitter.Color = Colors.Lime;
             particles.AddEmitter(greenEmitter);
 
-            bg = new RectangleShape(new Vector2f(1280, 720));
+            bg = new Sprite();
             particleTexture = new RenderTexture(1280, 720);
             particleTexture.Clear(Color.Blue);
         }
@@ -106,8 +102,10 @@ namespace LudumDare.GameView.Views
 
         public void Render(TimeSpan delta, RenderTarget target, UISceneManager ui)
         {
+            target.Clear(Colors.White);
             particles.Render(particleTexture, particle);
             bg.Texture = particleTexture.Texture;
+            bg.Color = new Color(150, 150, 150, 150);
             target.Draw(bg);
             ui.CurrentScene = scene;
         }

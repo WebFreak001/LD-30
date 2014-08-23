@@ -2,11 +2,8 @@
 using FarseerPhysics.Factories;
 using Microsoft.Xna.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace LudumDare
+namespace LudumDare.Json
 {
     public class SceneDeserializer
     {

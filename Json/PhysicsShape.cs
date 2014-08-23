@@ -1,11 +1,6 @@
-﻿using Microsoft.Xna.Framework;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
+﻿using System.ComponentModel;
 
-namespace LudumDare
+namespace LudumDare.Json
 {
     public class PhysicsShape
     {
@@ -45,5 +40,8 @@ namespace LudumDare
 
         [DefaultValue(false)]
         public bool IgnoreGravity { get; set; }
+
+        [DefaultValue(typeof(ColliderCategory), "Generic")]
+        public ColliderCategory Category { get; set; }
     }
 }
