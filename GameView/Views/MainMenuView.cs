@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace LudumDare.GameView.Views
 {
-    public class MainMenuView : IGameView
+    public class MainMenuView : IGameView, IDisposable
     {
         private Scene scene;
 
@@ -83,6 +83,8 @@ namespace LudumDare.GameView.Views
 
         private void PlayButton_OnClick(object sender, EventArgs e)
         {
+            Next(this, new InGameView());
+            Dispose();
         }
 
         private void SettingsButton_OnClick(object sender, EventArgs e)
@@ -108,6 +110,11 @@ namespace LudumDare.GameView.Views
             bg.Texture = particleTexture.Texture;
             target.Draw(bg);
             ui.CurrentScene = scene;
+        }
+
+        public void Dispose()
+        {
+            particleTexture.Dispose();
         }
 
         public event EventHandler<IGameView> Next;

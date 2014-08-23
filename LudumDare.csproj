@@ -71,6 +71,7 @@
     <Compile Include="DisplayShape.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="GameScene.cs" />
+    <Compile Include="GameView\Views\InGameView.cs" />
     <Compile Include="InputTest.cs" />
     <Compile Include="LevelEditor.cs" />
     <Compile Include="ParticleSystem\Emitter.cs" />

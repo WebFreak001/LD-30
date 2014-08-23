@@ -21,7 +21,7 @@ namespace LudumDare
 
         public void Run()
         {
-            window = new RenderWindow(new VideoMode(1280, 720), "LD30", Styles.Close | Styles.Titlebar);
+            window = new RenderWindow(new VideoMode(1280, 720), "30", Styles.Close | Styles.Titlebar);
             window.Closed += window_Closed;
             window.Resized += window_Resized;
 
