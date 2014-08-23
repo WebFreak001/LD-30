@@ -10,9 +10,9 @@ namespace LudumDare.GameView
 {
     public interface IGameView
     {
-        void Update();
+        void Update(TimeSpan delta);
 
-        void Render(RenderTarget target, UISceneManager ui);
+        void Render(TimeSpan delta, RenderTarget target, UISceneManager ui);
 
         event EventHandler<IGameView> Next;
     }

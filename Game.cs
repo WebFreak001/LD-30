@@ -1,17 +1,10 @@
 ﻿using LudumDare.GameView;
 using LudumDare.GameView.Views;
-using Newtonsoft.Json;
 using SFML.Graphics;
 using SFML.Window;
 using sfml_ui;
-using sfml_ui.Controls;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LudumDare
 {
@@ -28,7 +21,7 @@ namespace LudumDare
 
         public void Run()
         {
-            window = new RenderWindow(new VideoMode(1280, 720), "LD30", Styles.Default);
+            window = new RenderWindow(new VideoMode(1280, 720), "LD30", Styles.Close | Styles.Titlebar);
             window.Closed += window_Closed;
             window.Resized += window_Resized;
 
@@ -50,11 +43,9 @@ namespace LudumDare
                 window.DispatchEvents();
                 window.Clear();
                 render.world.Step((float)elapsed.TotalSeconds);
-                view.Update();
+                view.Update(elapsed);
 
-                //render.Render(window);
-
-                view.Render(window, ui);
+                view.Render(elapsed, window, ui);
                 ui.Render(window);
 
                 window.Display();
@@ -73,13 +64,6 @@ namespace LudumDare
         private void window_Resized(object sender, SizeEventArgs e)
         {
             window.SetView(new View(new FloatRect(0, 0, e.Width, e.Height)));
-        }
-
-        private void importButton_OnClick(object sender, EventArgs e)
-        {
-            render.Clear();
-            SceneDeserializer s = new SceneDeserializer(JsonConvert.DeserializeObject<GameScene>(File.ReadAllText("Content/bob.json")));
-            s.AddObjects(render.world);
         }
 
         private void window_Closed(object sender, EventArgs e)

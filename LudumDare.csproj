@@ -73,6 +73,9 @@
     <Compile Include="GameScene.cs" />
     <Compile Include="InputTest.cs" />
     <Compile Include="LevelEditor.cs" />
+    <Compile Include="ParticleSystem\Emitter.cs" />
+    <Compile Include="ParticleSystem\IndexedParticleSystem.cs" />
+    <Compile Include="ParticleSystem\Particle.cs" />
     <Compile Include="PhysicsShape.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />

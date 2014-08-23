@@ -1,4 +1,5 @@
-﻿using SFML.Graphics;
+﻿using LudumDare.ParticleSystem;
+using SFML.Graphics;
 using SFML.Window;
 using sfml_ui;
 using sfml_ui.Controls;
@@ -17,6 +18,13 @@ namespace LudumDare.GameView.Views
         public ButtonControl playButton;
         public ButtonControl settingsButton;
         public ButtonControl quitButton;
+        public IndexedParticleSystem particles;
+        public Sprite particle;
+        private Emitter particleEmitter;
+        private Emitter greenEmitter;
+        private float Time;
+        private RenderTexture particleTexture;
+        private RectangleShape bg;
 
         public MainMenuView()
         {
@@ -49,6 +57,28 @@ namespace LudumDare.GameView.Views
             scene.AddComponent(playButton);
             scene.AddComponent(settingsButton);
             scene.AddComponent(quitButton);
+
+            particles = new IndexedParticleSystem();
+            particle = new Sprite(new Texture("Content/particle.png"));
+            particle.Origin = new Vector2f(32, 32);
+
+            particleEmitter = new Emitter();
+            particleEmitter.Position = new Vector2f(50, 50);
+            particleEmitter.ParticlesSpawnRate = 200;
+            particleEmitter.Spread = 30;
+            particleEmitter.Color = Color.Blue;
+            particles.AddEmitter(particleEmitter);
+
+            greenEmitter = new Emitter();
+            greenEmitter.Position = new Vector2f(50, 50);
+            greenEmitter.ParticlesSpawnRate = 150;
+            greenEmitter.Spread = 30;
+            greenEmitter.Color = Colors.Lime;
+            particles.AddEmitter(greenEmitter);
+
+            bg = new RectangleShape(new Vector2f(1280, 720));
+            particleTexture = new RenderTexture(1280, 720);
+            particleTexture.Clear(Color.Blue);
         }
 
         private void PlayButton_OnClick(object sender, EventArgs e)
@@ -64,12 +94,19 @@ namespace LudumDare.GameView.Views
             Environment.Exit(0);
         }
 
-        public void Update()
+        public void Update(TimeSpan delta)
         {
+            particles.Update(delta);
+            Time += (float)delta.TotalSeconds * 2;
+            particleEmitter.Position = new Vector2f((float)Math.Sin(Time) * 540 + 640, (float)Math.Cos(Time) * 260 + 160);
+            greenEmitter.Position = new Vector2f((float)-Math.Sin(Time) * 340 + 640, (float)Math.Cos(Time) * 60 + 160);
         }
 
-        public void Render(RenderTarget target, UISceneManager ui)
+        public void Render(TimeSpan delta, RenderTarget target, UISceneManager ui)
         {
+            particles.Render(particleTexture, particle);
+            bg.Texture = particleTexture.Texture;
+            target.Draw(bg);
             ui.CurrentScene = scene;
         }
 
