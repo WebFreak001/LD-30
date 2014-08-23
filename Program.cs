@@ -14,8 +14,8 @@ namespace LudumDare
     {
         public static void Main(string[] args)
         {
-            using (var test = new LevelEditor())
-                test.Run();
+            using (var game = new Game())
+                game.Run();
         }
     }
 }

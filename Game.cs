@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using LudumDare.GameView;
+using LudumDare.GameView.Views;
+using Newtonsoft.Json;
 using SFML.Graphics;
 using SFML.Window;
 using sfml_ui;
@@ -18,6 +20,7 @@ namespace LudumDare
         private RenderWindow window;
         private UISceneManager ui;
         private SceneRenderer render;
+        private IGameView view;
 
         public Game()
         {
@@ -31,16 +34,15 @@ namespace LudumDare
 
             ui = new UISceneManager();
             ui.Init(window);
-            Scene scene = new Scene(ScrollInputs.None);
-            ButtonControl importButton = new ButtonControl(new Font("Content/font.ttf"), 22, "Content/button.png", "Content/button_hover.png", "Content/button_pressed.png") { Position = new Vector2f(10, 70), Size = new Vector2f(200, 49), Text = "Import", Anchor = AnchorPoints.Left | AnchorPoints.Top };
-            importButton.OnClick += importButton_OnClick;
-            scene.AddComponent(importButton);
-            ui.CurrentScene = scene;
+            ui.CurrentScene = new Scene(ScrollInputs.None);
 
             render = new SceneRenderer();
 
             Stopwatch sw = new Stopwatch();
             TimeSpan elapsed = TimeSpan.Zero;
+
+            view = new MainMenuView();
+            view.Next += view_Next;
 
             while (window.IsOpen())
             {
@@ -48,9 +50,11 @@ namespace LudumDare
                 window.DispatchEvents();
                 window.Clear();
                 render.world.Step((float)elapsed.TotalSeconds);
+                view.Update();
 
-                render.Render(window);
+                //render.Render(window);
 
+                view.Render(window, ui);
                 ui.Render(window);
 
                 window.Display();
@@ -58,6 +62,12 @@ namespace LudumDare
                 elapsed = sw.Elapsed;
                 sw.Reset();
             }
+        }
+
+        private void view_Next(object sender, IGameView e)
+        {
+            view = e;
+            view.Next += view_Next;
         }
 
         private void window_Resized(object sender, SizeEventArgs e)

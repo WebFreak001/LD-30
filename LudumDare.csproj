@@ -84,6 +84,8 @@
     <Compile Include="SceneRenderer.cs" />
     <Compile Include="SceneSerializer.cs" />
     <Compile Include="SceneTest.cs" />
+    <Compile Include="GameView\IGameView.cs" />
+    <Compile Include="GameView\Views\MainMenuView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
