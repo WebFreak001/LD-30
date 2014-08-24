@@ -112,7 +112,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostRunEvent>xcopy "$(ProjectDir)Content\*" "$(ProjectDir)$(OutDir)Content\" /s /i /y
-xcopy "$(ProjectDir)Libs\*" "$(ProjectDir)$(OutDir)" /s /i /y</PostRunEvent>
+    <PostBuildEvent>xcopy "$(ProjectDir)Content\*" "$(ProjectDir)$(OutDir)Content\" /s /i /y
+xcopy "$(ProjectDir)Libs\*" "$(ProjectDir)$(OutDir)" /s /i /y</PostBuildEvent>
   </PropertyGroup>
 </Project>
