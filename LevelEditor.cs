@@ -27,8 +27,10 @@ namespace LudumDare
         private float zoom = 1.0f;
         private Vector2f old = new Vector2f();
         private Vector2f offset = new Vector2f();
-        private Vector2f startClick;
+        private Vector2f startClick = new Vector2f();
         private Body selected = null;
+        private bool dragging = false;
+        private ContextMenu contextMenu;
 
         public LevelEditor()
         {
@@ -61,16 +63,53 @@ namespace LudumDare
             addBoxButton.OnClick += (s, e) => { world.CreateBox(new Vector2f(10, 10), 4, BodyType.Static); };
             FastButton addCircleButton = new FastButton(new Font("Content/font.ttf"), 22, "Content/circleButton.png", "Content/circleButton.png", "Content/circleButton.png") { Position = new Vector2f(150, 0), Size = new Vector2f(50, 48), Text = "", Anchor = AnchorPoints.Left | AnchorPoints.Top };
             addCircleButton.OnClick += (s, e) => { world.CreateCircle(5, 5, BodyType.Static); };
+            FastButton saveButton = new FastButton(new Font("Content/font.ttf"), 22, "Content/saveButton.png", "Content/saveButton.png", "Content/saveButton.png") { Position = new Vector2f(200, 0), Size = new Vector2f(50, 48), Text = "", Anchor = AnchorPoints.Left | AnchorPoints.Top };
+            saveButton.OnClick += (s, e) => { Export(); };
 
             scene.AddComponent(bg);
             scene.AddComponent(runButton);
             scene.AddComponent(pauseButton);
             scene.AddComponent(addBoxButton);
             scene.AddComponent(addCircleButton);
+            scene.AddComponent(saveButton);
             scene.AddComponent(new WorldHierachyRenderer(world) { Size = new Vector2f(300, 670), Position = new Vector2f(0, 50), BackgroundColor = Colors.Snow });
             ui.CurrentScene = scene;
             Import();
             Export();
+
+            contextMenu = new ContextMenu();
+            contextMenu.Add(() =>
+            {
+                selected.BodyType = BodyType.Dynamic;
+            }, "Set Dynamic");
+            contextMenu.Add(() =>
+            {
+                selected.BodyType = BodyType.Static;
+            }, "Set Static");
+            contextMenu.Add(() =>
+            {
+                selected.Rotation += 0.34906585f;
+            }, "Rotate +20");
+            contextMenu.Add(() =>
+            {
+                selected.Rotation += 0.785398163f;
+            }, "Rotate +45");
+            contextMenu.Add(() =>
+            {
+                selected.Rotation += 1.57079633f;
+            }, "Rotate +90");
+            contextMenu.Add(() =>
+            {
+                selected.Rotation -= 0.34906585f;
+            }, "Rotate -20");
+            contextMenu.Add(() =>
+            {
+                selected.Rotation -= 0.785398163f;
+            }, "Rotate -45");
+            contextMenu.Add(() =>
+            {
+                selected.Rotation -= 1.57079633f;
+            }, "Rotate -90");
 
             Stopwatch sw = new Stopwatch();
             TimeSpan elapsed = TimeSpan.Zero;
@@ -86,7 +125,6 @@ namespace LudumDare
                 sw.Start();
                 window.DispatchEvents();
                 window.Clear();
-                Update();
 
                 if (enabled)
                     world.Step((float)elapsed.TotalSeconds);
@@ -107,6 +145,7 @@ namespace LudumDare
                 window.SetView(v);
 
                 ui.Render(window);
+                contextMenu.Render(window);
 
                 window.Display();
                 sw.Stop();
@@ -120,31 +159,6 @@ namespace LudumDare
                     frames = 0;
                 }
                 sw.Reset();
-            }
-        }
-
-        private void window_MouseButtonPressed(object sender, MouseButtonEventArgs e)
-        {
-            if (e.Button == Mouse.Button.Left)
-            {
-                Vector2f point = ((new Vector2f(e.X, e.Y) - offset) / zoom) * 0.1f;
-                AABB aabb = new AABB(new Vector2(point.X, point.Y), 1, 1);
-
-                world.world.QueryAABB((fix) =>
-                {
-                    var shape = fix.Shape;
-                    var pointB2 = new Vector2(point.X, point.Y);
-                    FarseerPhysics.Common.Transform transform;
-                    fix.Body.GetTransform(out transform);
-                    if (shape.TestPoint(ref transform, ref pointB2))
-                    {
-                        selected = fix.Body;
-                        Console.WriteLine("Selected");
-                        return false;
-                    }
-                    Console.WriteLine("Selected");
-                    return true;
-                }, ref aabb);
             }
         }
 
@@ -164,12 +178,10 @@ namespace LudumDare
             }
         }
 
-        public void Update()
-        {
-        }
-
         private void window_MouseButtonReleased(object sender, MouseButtonEventArgs e)
         {
+            contextMenu.OnClick(new Vector2f(e.X, e.Y) - contextMenu.Position);
+            contextMenu.Close();
             if (e.Button == Mouse.Button.Middle)
             {
                 zoom = 1;
@@ -179,6 +191,42 @@ namespace LudumDare
             {
                 selected = null;
             }
+            else if (e.Button == Mouse.Button.Right && selected != null)
+            {
+                Console.WriteLine(startClick);
+                if (Math.Abs(startClick.X) < 4 && Math.Abs(startClick.Y) < 4)
+                {
+                    contextMenu.Open(new Vector2f(e.X, e.Y));
+                    Console.WriteLine(new Vector2f(e.X, e.Y));
+                }
+            }
+            dragging = false;
+        }
+
+        private void window_MouseButtonPressed(object sender, MouseButtonEventArgs e)
+        {
+            if ((e.Button == Mouse.Button.Left || e.Button == Mouse.Button.Right) && !contextMenu.IsOpen)
+            {
+                Vector2f point = ((new Vector2f(e.X, e.Y) - offset) * zoom) * 0.1f;
+                AABB aabb = new AABB(new Vector2(point.X, point.Y), 1, 1);
+
+                world.world.QueryAABB((fix) =>
+                {
+                    var shape = fix.Shape;
+                    var pointB2 = new Vector2(point.X, point.Y);
+                    FarseerPhysics.Common.Transform transform;
+                    fix.Body.GetTransform(out transform);
+                    if (shape.TestPoint(ref transform, ref pointB2))
+                    {
+                        selected = fix.Body;
+                        Console.WriteLine("Selected");
+                        return false;
+                    }
+                    return true;
+                }, ref aabb);
+                dragging = true;
+            }
+            startClick = new Vector2f(0, 0);
         }
 
         private void window_MouseMoved(object sender, MouseMoveEventArgs e)
@@ -186,10 +234,11 @@ namespace LudumDare
             if (Mouse.IsButtonPressed(Mouse.Button.Right))
             {
                 offset += new Vector2f(e.X, e.Y) - old;
+                startClick += new Vector2f(e.X, e.Y) - old;
             }
             if (Mouse.IsButtonPressed(Mouse.Button.Left))
             {
-                if (selected != null && !enabled)
+                if (selected != null && !enabled && dragging)
                 {
                     selected.Awake = true;
                     selected.Position += (new Vector2(e.X, e.Y) - new Vector2(old.X, old.Y)) * 0.1f;

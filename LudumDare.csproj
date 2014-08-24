@@ -68,6 +68,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContextMenu.cs" />
     <Compile Include="Control\FastButton.cs" />
     <Compile Include="Control\FastText.cs" />
     <Compile Include="Control\PhysicsInfoItem.cs" />
@@ -111,7 +112,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(ProjectDir)Content\*" "$(ProjectDir)$(OutDir)Content\" /s /i /y
-xcopy "$(ProjectDir)Libs\*" "$(ProjectDir)$(OutDir)" /s /i /y</PostBuildEvent>
+    <PostRunEvent>xcopy "$(ProjectDir)Content\*" "$(ProjectDir)$(OutDir)Content\" /s /i /y
+xcopy "$(ProjectDir)Libs\*" "$(ProjectDir)$(OutDir)" /s /i /y</PostRunEvent>
   </PropertyGroup>
 </Project>
