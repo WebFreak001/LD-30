@@ -1,5 +1,6 @@
 ﻿using FarseerPhysics.Dynamics;
 using FarseerPhysics.Factories;
+using LudumDare.Physics;
 using Microsoft.Xna.Framework;
 using System;
 
@@ -14,7 +15,7 @@ namespace LudumDare.Json
             this.scene = scene;
         }
 
-        public void AddObjects(World world)
+        public void AddObjects(PhysicsWorld world)
         {
             Console.WriteLine("Generating Scene " + scene.Name);
             foreach (SceneObject obj in scene.Objects)
@@ -23,11 +24,11 @@ namespace LudumDare.Json
                 Body body = null;
                 if (shape.Mesh.Trim().ToLower() == "rectangle" || shape.Mesh.Trim().ToLower() == "box")
                 {
-                    body = BodyFactory.CreateRectangle(world, shape.Dimension.X, shape.Dimension.Y, shape.Mass);
+                    body = BodyFactory.CreateRectangle(world.world, shape.Dimension.X, shape.Dimension.Y, shape.Mass);
                 }
                 else if (shape.Mesh.Trim().ToLower() == "circle")
                 {
-                    body = BodyFactory.CreateCircle(world, shape.Radius, shape.Mass);
+                    body = BodyFactory.CreateCircle(world.world, shape.Radius, shape.Mass);
                 }
                 else
                 {
@@ -46,6 +47,7 @@ namespace LudumDare.Json
                 body.UserData = (shape.Mesh.Trim().ToLower() == "circle" ? "circle;" : "box;") + (shape.Mesh.Trim().ToLower() == "circle" ? shape.Radius + ";" : shape.Dimension.X + ";" + shape.Dimension.Y + ";") + shape.UserData;
                 body.IgnoreGravity = shape.IgnoreGravity;
 
+                world.Add(body);
                 Console.WriteLine("Body created: " + body.UserData);
             }
         }

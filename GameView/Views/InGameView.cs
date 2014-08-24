@@ -10,28 +10,28 @@ namespace LudumDare.GameView.Views
     public class InGameView : IGameView
     {
         private Scene scene;
-        private SceneRenderer renderer;
+        private PhysicsWorld world;
         public static Player player;
 
         public InGameView()
         {
             scene = new Scene(ScrollInputs.None);
-            renderer = new SceneRenderer();
-            player = new Player(new PhysicsWorld(renderer.world));
+            world = new PhysicsWorld();
+            player = new Player(world);
             SceneDeserializer d = new SceneDeserializer(SceneLoader.Load("Content/bob.json"));
-            d.AddObjects(renderer.world);
+            d.AddObjects(world);
         }
 
         public void Update(TimeSpan delta)
         {
-            renderer.world.Step((float)delta.TotalSeconds);
+            world.Step((float)delta.TotalSeconds);
             Console.WriteLine(player.PhysObj.Position);
         }
 
         public void Render(TimeSpan delta, RenderTarget target, UISceneManager ui)
         {
             ui.CurrentScene = scene;
-            renderer.Render(target);
+            world.Render(target);
         }
 
         public event EventHandler<IGameView> Next;

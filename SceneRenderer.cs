@@ -3,6 +3,8 @@ using LudumDare.Json;
 using Microsoft.Xna.Framework;
 using SFML.Graphics;
 using SFML.Window;
+using System;
+using System.Diagnostics;
 
 namespace LudumDare
 {
@@ -11,21 +13,19 @@ namespace LudumDare
         public World world;
         public CircleShape unitCircle;
         public RectangleShape unitRect;
+        private Stopwatch sw;
 
-        public SceneRenderer()
+        public SceneRenderer(World world)
         {
-            world = new World(new Vector2(0, 9.7f));
+            this.world = world;
             unitCircle = new CircleShape(5.0f, 32);
             unitRect = new RectangleShape(new Vector2f(10, 10));
             unitRect.Origin = new Vector2f(5, 5);
             unitCircle.Origin = new Vector2f(5, 5);
             unitCircle.FillColor = Color.White;
             unitRect.FillColor = Color.White;
-        }
 
-        public void Clear()
-        {
-            world.Clear();
+            sw = new Stopwatch();
         }
 
         public void Render(RenderTarget target)

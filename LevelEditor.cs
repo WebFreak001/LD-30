@@ -1,5 +1,6 @@
 ﻿using LudumDare.Control;
 using LudumDare.Json;
+using LudumDare.Physics;
 using Newtonsoft.Json;
 using SFML.Graphics;
 using SFML.Window;
@@ -17,7 +18,7 @@ namespace LudumDare
     {
         private RenderWindow window;
         private UISceneManager ui;
-        private SceneRenderer render;
+        private PhysicsWorld world;
         private bool enabled;
         private float zoom = 1.0f;
         private Vector2f old = new Vector2f();
@@ -38,29 +39,31 @@ namespace LudumDare
             window.KeyPressed += window_KeyPressed;
             window.KeyReleased += window_KeyReleased;
 
-            render = new SceneRenderer();
+            world = new PhysicsWorld();
 
             ui = new UISceneManager();
             ui.Init(window);
             Scene scene = new Scene(ScrollInputs.None);
-            TextControl bg = new TextControl(new Font("Content/font.ttf")) { Position = new Vector2f(0, 0), Size = new Vector2f(1280, 50), Anchor = AnchorPoints.Left | AnchorPoints.Top | AnchorPoints.Right, Text = "", BackgroundColor = Colors.WhiteSmoke };
+            RectControl bg = new RectControl() { Position = new Vector2f(0, 0), Size = new Vector2f(1280, 50), Anchor = AnchorPoints.Left | AnchorPoints.Top | AnchorPoints.Right, BackgroundColor = Colors.WhiteSmoke };
 
-            ButtonControl runButton = new ButtonControl(new Font("Content/font.ttf"), 22, "Content/playButton.png", "Content/playButton.png", "Content/playButton.png") { Position = new Vector2f(0, 0), Size = new Vector2f(50, 48), Text = "", Anchor = AnchorPoints.Left | AnchorPoints.Top };
+            FastButton runButton = new FastButton(new Font("Content/font.ttf"), 22, "Content/playButton.png", "Content/playButton.png", "Content/playButton.png") { Position = new Vector2f(0, 0), Size = new Vector2f(50, 48), Text = "", Anchor = AnchorPoints.Left | AnchorPoints.Top };
             runButton.OnClick += (s, e) => { enabled = true; };
-            ButtonControl pauseButton = new ButtonControl(new Font("Content/font.ttf"), 22, "Content/pauseButton.png", "Content/pauseButton.png", "Content/pauseButton.png") { Position = new Vector2f(50, 0), Size = new Vector2f(50, 48), Text = "", Anchor = AnchorPoints.Left | AnchorPoints.Top };
+            FastButton pauseButton = new FastButton(new Font("Content/font.ttf"), 22, "Content/pauseButton.png", "Content/pauseButton.png", "Content/pauseButton.png") { Position = new Vector2f(50, 0), Size = new Vector2f(50, 48), Text = "", Anchor = AnchorPoints.Left | AnchorPoints.Top };
             pauseButton.OnClick += (s, e) => { enabled = false; };
 
             scene.AddComponent(bg);
             scene.AddComponent(runButton);
             scene.AddComponent(pauseButton);
-            scene.AddComponent(new WorldHierachyRenderer(render.world) { Size = new Vector2f(300, 670), Position = new Vector2f(0, 50), BackgroundColor = Colors.Snow });
+            scene.AddComponent(new WorldHierachyRenderer(world) { Size = new Vector2f(300, 670), Position = new Vector2f(0, 50), BackgroundColor = Colors.Snow });
             ui.CurrentScene = scene;
             Import();
             Export();
 
             Stopwatch sw = new Stopwatch();
             TimeSpan elapsed = TimeSpan.Zero;
-            render.world.Step(0);
+            TimeSpan secondCounter = TimeSpan.Zero;
+            int frames = 0;
+            world.Step(0);
 
             View v;
             Console.WriteLine(window.GetView().Center);
@@ -73,17 +76,20 @@ namespace LudumDare
                 Update();
 
                 if (enabled)
-                    render.world.Step((float)elapsed.TotalSeconds);
+                    world.Step((float)elapsed.TotalSeconds);
 
                 v = window.GetView();
                 v.Zoom(zoom);
-                v.Center = new Vector2f(640, 360) - offset;
+                v.Center = (world.CamLock == null ? (new Vector2f(640, 360) - offset) : new Vector2f(world.CamLock.Position.X * 10, world.CamLock.Position.Y * 10));
+                if (world.CamLock != null) v.Rotation = world.CamLock.Rotation * 57.2957795f;
+                else v.Rotation = 0;
                 window.SetView(v);
 
-                render.Render(window);
+                world.Render(window);
 
                 v = window.GetView();
                 v.Size = new Vector2f(1280, 720);
+                v.Rotation = 0;
                 v.Center = new Vector2f(640, 360);
                 window.SetView(v);
 
@@ -92,6 +98,14 @@ namespace LudumDare
                 window.Display();
                 sw.Stop();
                 elapsed = sw.Elapsed;
+                secondCounter += elapsed;
+                frames++;
+                if (secondCounter >= TimeSpan.FromSeconds(1))
+                {
+                    Console.WriteLine(frames / secondCounter.TotalSeconds);
+                    secondCounter -= TimeSpan.FromSeconds(1);
+                    frames = 0;
+                }
                 sw.Reset();
             }
         }
@@ -127,7 +141,7 @@ namespace LudumDare
 
         private void window_MouseMoved(object sender, MouseMoveEventArgs e)
         {
-            if (Mouse.IsButtonPressed(Mouse.Button.Left))
+            if (Mouse.IsButtonPressed(Mouse.Button.Right))
             {
                 offset += new Vector2f(e.X, e.Y) - old;
             }
@@ -146,9 +160,9 @@ namespace LudumDare
 
         public void Import()
         {
-            render.Clear();
+            world.Clear();
             SceneDeserializer s = new SceneDeserializer(JsonConvert.DeserializeObject<GameScene>(File.ReadAllText("Content/bob.json")));
-            s.AddObjects(render.world);
+            s.AddObjects(world);
         }
 
         public void Export()

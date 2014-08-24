@@ -2,6 +2,8 @@
 {
     public enum DisplayShape
     {
-        Circle, Box
+        Circle,
+        Box,
+        Capsule
     }
 }
