@@ -47,6 +47,8 @@ namespace LudumDare.Control
 
         public event EventHandler OnClick;
 
+        public Color Color { get { return text.Color; } set { text.Color = value; } }
+
         private RectangleShape left, middle, right;
         private FastText text;
         private Vector2f size;

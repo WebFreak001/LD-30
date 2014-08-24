@@ -1,6 +1,8 @@
 ﻿using FarseerPhysics.Dynamics;
+using FarseerPhysics.Factories;
 using Microsoft.Xna.Framework;
 using SFML.Graphics;
+using SFML.Window;
 using System;
 using System.Collections.Generic;
 
@@ -46,6 +48,24 @@ namespace LudumDare.Physics
         public void Render(RenderTarget target)
         {
             renderer.Render(target);
+        }
+
+        public Body CreateBox(Vector2f dimension, float density, BodyType type)
+        {
+            Body b = BodyFactory.CreateRectangle(world, dimension.X, dimension.Y, density);
+            b.UserData = "box;" + dimension.X + ";" + dimension.Y + ";user";
+            b.BodyType = type;
+            Add(b);
+            return b;
+        }
+
+        public Body CreateCircle(float radius, float density, BodyType type)
+        {
+            Body b = BodyFactory.CreateCircle(world, radius, density);
+            b.UserData = "circle;" + radius + ";user";
+            b.BodyType = type;
+            Add(b);
+            return b;
         }
 
         public void Clear()

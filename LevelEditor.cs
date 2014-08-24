@@ -1,6 +1,10 @@
-﻿using LudumDare.Control;
+﻿using FarseerPhysics.Collision;
+using FarseerPhysics.Dynamics;
+using FarseerPhysics.Factories;
+using LudumDare.Control;
 using LudumDare.Json;
 using LudumDare.Physics;
+using Microsoft.Xna.Framework;
 using Newtonsoft.Json;
 using SFML.Graphics;
 using SFML.Window;
@@ -23,6 +27,8 @@ namespace LudumDare
         private float zoom = 1.0f;
         private Vector2f old = new Vector2f();
         private Vector2f offset = new Vector2f();
+        private Vector2f startClick;
+        private Body selected = null;
 
         public LevelEditor()
         {
@@ -34,6 +40,7 @@ namespace LudumDare
             window.Closed += window_Closed;
             window.Resized += window_Resized;
             window.MouseWheelMoved += window_MouseWheelMoved;
+            window.MouseButtonPressed += window_MouseButtonPressed;
             window.MouseMoved += window_MouseMoved;
             window.MouseButtonReleased += window_MouseButtonReleased;
             window.KeyPressed += window_KeyPressed;
@@ -50,10 +57,16 @@ namespace LudumDare
             runButton.OnClick += (s, e) => { enabled = true; };
             FastButton pauseButton = new FastButton(new Font("Content/font.ttf"), 22, "Content/pauseButton.png", "Content/pauseButton.png", "Content/pauseButton.png") { Position = new Vector2f(50, 0), Size = new Vector2f(50, 48), Text = "", Anchor = AnchorPoints.Left | AnchorPoints.Top };
             pauseButton.OnClick += (s, e) => { enabled = false; };
+            FastButton addBoxButton = new FastButton(new Font("Content/font.ttf"), 22, "Content/boxButton.png", "Content/boxButton.png", "Content/boxButton.png") { Position = new Vector2f(100, 0), Size = new Vector2f(50, 48), Text = "", Anchor = AnchorPoints.Left | AnchorPoints.Top };
+            addBoxButton.OnClick += (s, e) => { world.CreateBox(new Vector2f(10, 10), 4, BodyType.Static); };
+            FastButton addCircleButton = new FastButton(new Font("Content/font.ttf"), 22, "Content/circleButton.png", "Content/circleButton.png", "Content/circleButton.png") { Position = new Vector2f(150, 0), Size = new Vector2f(50, 48), Text = "", Anchor = AnchorPoints.Left | AnchorPoints.Top };
+            addCircleButton.OnClick += (s, e) => { world.CreateCircle(5, 5, BodyType.Static); };
 
             scene.AddComponent(bg);
             scene.AddComponent(runButton);
             scene.AddComponent(pauseButton);
+            scene.AddComponent(addBoxButton);
+            scene.AddComponent(addCircleButton);
             scene.AddComponent(new WorldHierachyRenderer(world) { Size = new Vector2f(300, 670), Position = new Vector2f(0, 50), BackgroundColor = Colors.Snow });
             ui.CurrentScene = scene;
             Import();
@@ -110,6 +123,31 @@ namespace LudumDare
             }
         }
 
+        private void window_MouseButtonPressed(object sender, MouseButtonEventArgs e)
+        {
+            if (e.Button == Mouse.Button.Left)
+            {
+                Vector2f point = ((new Vector2f(e.X, e.Y) - offset) / zoom) * 0.1f;
+                AABB aabb = new AABB(new Vector2(point.X, point.Y), 1, 1);
+
+                world.world.QueryAABB((fix) =>
+                {
+                    var shape = fix.Shape;
+                    var pointB2 = new Vector2(point.X, point.Y);
+                    FarseerPhysics.Common.Transform transform;
+                    fix.Body.GetTransform(out transform);
+                    if (shape.TestPoint(ref transform, ref pointB2))
+                    {
+                        selected = fix.Body;
+                        Console.WriteLine("Selected");
+                        return false;
+                    }
+                    Console.WriteLine("Selected");
+                    return true;
+                }, ref aabb);
+            }
+        }
+
         private void window_KeyReleased(object sender, KeyEventArgs e)
         {
             if (e.Code == Keyboard.Key.Space)
@@ -137,6 +175,10 @@ namespace LudumDare
                 zoom = 1;
                 offset = new Vector2f();
             }
+            else if (e.Button == Mouse.Button.Left)
+            {
+                selected = null;
+            }
         }
 
         private void window_MouseMoved(object sender, MouseMoveEventArgs e)
@@ -144,6 +186,14 @@ namespace LudumDare
             if (Mouse.IsButtonPressed(Mouse.Button.Right))
             {
                 offset += new Vector2f(e.X, e.Y) - old;
+            }
+            if (Mouse.IsButtonPressed(Mouse.Button.Left))
+            {
+                if (selected != null && !enabled)
+                {
+                    selected.Awake = true;
+                    selected.Position += (new Vector2(e.X, e.Y) - new Vector2(old.X, old.Y)) * 0.1f;
+                }
             }
             old = new Vector2f(e.X, e.Y);
         }
