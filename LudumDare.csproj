@@ -68,6 +68,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\PhysicsInfoItem.cs" />
+    <Compile Include="Control\WorldHierachyRenderer.cs" />
     <Compile Include="Json\ColliderCategory.cs" />
     <Compile Include="Json\DisplayShape.cs" />
     <Compile Include="Game.cs" />

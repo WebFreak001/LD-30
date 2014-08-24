@@ -4,7 +4,7 @@
     {
         public static void Main(string[] args)
         {
-            using (var game = new Game())
+            using (var game = new LevelEditor())
                 game.Run();
         }
     }

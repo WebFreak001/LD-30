@@ -10,6 +10,7 @@ namespace LudumDare.Physics
 
         public PhysicsWorld(World world)
         {
+            this.world = world;
         }
 
         public void Add(Body body)

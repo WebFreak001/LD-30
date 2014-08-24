@@ -53,11 +53,16 @@ namespace LudumDare.Json
         public static void GetUserData(string userData, out string type, out float radius, out Point dimension)
         {
             string[] splits = userData.Split(';');
-            type = splits[0].Trim().ToLower() == "circle" ? "circle" : "box";
+            type = splits[0].Trim().ToLower() == "circle" ? "circle" : (splits[0].Trim().ToLower() == "capsule" ? "capsule" : "box");
             if (type == "circle")
             {
                 radius = float.Parse(splits[1]);
                 dimension = new Point();
+            }
+            else if (type == "box")
+            {
+                radius = 0;
+                dimension = new Point(float.Parse(splits[1]), float.Parse(splits[2]));
             }
             else
             {

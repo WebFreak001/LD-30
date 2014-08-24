@@ -12,7 +12,6 @@ namespace LudumDare
     {
         private RenderWindow window;
         private UISceneManager ui;
-        private SceneRenderer render;
         private IGameView view;
 
         public Game()
@@ -29,8 +28,6 @@ namespace LudumDare
             ui.Init(window);
             ui.CurrentScene = new Scene(ScrollInputs.None);
 
-            render = new SceneRenderer();
-
             Stopwatch sw = new Stopwatch();
             TimeSpan elapsed = TimeSpan.Zero;
 
@@ -42,7 +39,6 @@ namespace LudumDare
                 sw.Start();
                 window.DispatchEvents();
                 window.Clear();
-                render.world.Step((float)elapsed.TotalSeconds);
                 view.Update(elapsed);
 
                 view.Render(elapsed, window, ui);

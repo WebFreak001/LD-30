@@ -1,12 +1,15 @@
-﻿using LudumDare.Json;
+﻿using LudumDare.Control;
+using LudumDare.Json;
 using Newtonsoft.Json;
 using SFML.Graphics;
 using SFML.Window;
 using sfml_ui;
 using sfml_ui.Controls;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 
 namespace LudumDare
 {
@@ -26,12 +29,16 @@ namespace LudumDare
 
         public void Run()
         {
-            window = new RenderWindow(new VideoMode(1280, 720), "Scene Test", Styles.Default);
+            window = new RenderWindow(new VideoMode(1280, 720), "30 Editor", Styles.Titlebar | Styles.Close);
             window.Closed += window_Closed;
             window.Resized += window_Resized;
             window.MouseWheelMoved += window_MouseWheelMoved;
             window.MouseMoved += window_MouseMoved;
             window.MouseButtonReleased += window_MouseButtonReleased;
+            window.KeyPressed += window_KeyPressed;
+            window.KeyReleased += window_KeyReleased;
+
+            render = new SceneRenderer();
 
             ui = new UISceneManager();
             ui.Init(window);
@@ -39,14 +46,17 @@ namespace LudumDare
             TextControl bg = new TextControl(new Font("Content/font.ttf")) { Position = new Vector2f(0, 0), Size = new Vector2f(1280, 50), Anchor = AnchorPoints.Left | AnchorPoints.Top | AnchorPoints.Right, Text = "", BackgroundColor = Colors.WhiteSmoke };
 
             ButtonControl runButton = new ButtonControl(new Font("Content/font.ttf"), 22, "Content/playButton.png", "Content/playButton.png", "Content/playButton.png") { Position = new Vector2f(0, 0), Size = new Vector2f(50, 48), Text = "", Anchor = AnchorPoints.Left | AnchorPoints.Top };
-            runButton.OnClick += (s, e) => { enabled = !enabled; };
+            runButton.OnClick += (s, e) => { enabled = true; };
+            ButtonControl pauseButton = new ButtonControl(new Font("Content/font.ttf"), 22, "Content/pauseButton.png", "Content/pauseButton.png", "Content/pauseButton.png") { Position = new Vector2f(50, 0), Size = new Vector2f(50, 48), Text = "", Anchor = AnchorPoints.Left | AnchorPoints.Top };
+            pauseButton.OnClick += (s, e) => { enabled = false; };
 
             scene.AddComponent(bg);
             scene.AddComponent(runButton);
+            scene.AddComponent(pauseButton);
+            scene.AddComponent(new WorldHierachyRenderer(render.world) { Size = new Vector2f(300, 670), Position = new Vector2f(0, 50), BackgroundColor = Colors.Snow });
             ui.CurrentScene = scene;
-
-            render = new SceneRenderer();
             Import();
+            Export();
 
             Stopwatch sw = new Stopwatch();
             TimeSpan elapsed = TimeSpan.Zero;
@@ -60,6 +70,8 @@ namespace LudumDare
                 sw.Start();
                 window.DispatchEvents();
                 window.Clear();
+                Update();
+
                 if (enabled)
                     render.world.Step((float)elapsed.TotalSeconds);
 
@@ -82,6 +94,26 @@ namespace LudumDare
                 elapsed = sw.Elapsed;
                 sw.Reset();
             }
+        }
+
+        private void window_KeyReleased(object sender, KeyEventArgs e)
+        {
+            if (e.Code == Keyboard.Key.Space)
+            {
+                enabled = false;
+            }
+        }
+
+        private void window_KeyPressed(object sender, KeyEventArgs e)
+        {
+            if (e.Code == Keyboard.Key.Space)
+            {
+                enabled = true;
+            }
+        }
+
+        public void Update()
+        {
         }
 
         private void window_MouseButtonReleased(object sender, MouseButtonEventArgs e)
@@ -117,6 +149,24 @@ namespace LudumDare
             render.Clear();
             SceneDeserializer s = new SceneDeserializer(JsonConvert.DeserializeObject<GameScene>(File.ReadAllText("Content/bob.json")));
             s.AddObjects(render.world);
+        }
+
+        public void Export()
+        {
+            string[] files = Directory.GetFiles("Content/", "*.json");
+            string max = files.Where(file => file.StartsWith("LevelSave")).Select(name => name.Substring(9).Trim()).Select(name => name.Substring(0, name.IndexOf('.'))).Max();
+            int maxN = 0;
+            string save = "LevelSave";
+            if (int.TryParse(max, out maxN))
+            {
+                save += max + 1;
+            }
+            else
+            {
+                save += "1";
+            }
+            save += ".json";
+            Console.WriteLine(save);
         }
 
         private void window_Closed(object sender, EventArgs e)

@@ -41,11 +41,24 @@ namespace LudumDare
                 {
                     unitCircle.Scale = new Vector2f(radius, radius) * 2;
                     unitCircle.Position = new Vector2f(body.Position.X * 10, body.Position.Y * 10);
+                    unitCircle.Rotation = MathHelper.ToDegrees(body.Rotation);
                     target.Draw(unitCircle);
+                }
+                else if (type == "box")
+                {
+                    unitRect.Scale = new Vector2f(dimension.X, dimension.Y);
+                    unitRect.Position = new Vector2f(body.Position.X * 10, body.Position.Y * 10);
+                    unitRect.Rotation = MathHelper.ToDegrees(body.Rotation);
+                    target.Draw(unitRect);
                 }
                 else
                 {
-                    unitRect.Scale = new Vector2f(dimension.X, dimension.Y);
+                    unitCircle.Scale = new Vector2f(dimension.Y, dimension.Y) * 2;
+                    unitCircle.Position = new Vector2f(body.Position.X * 10, body.Position.Y * 10 - dimension.X * 5);
+                    target.Draw(unitCircle);
+                    unitCircle.Position = new Vector2f(body.Position.X * 10, body.Position.Y * 10 + dimension.X * 5);
+                    target.Draw(unitCircle);
+                    unitRect.Scale = new Vector2f(dimension.Y, dimension.X);
                     unitRect.Position = new Vector2f(body.Position.X * 10, body.Position.Y * 10);
                     unitRect.Rotation = MathHelper.ToDegrees(body.Rotation);
                     target.Draw(unitRect);

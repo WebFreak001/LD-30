@@ -1,14 +1,13 @@
 ﻿using Newtonsoft.Json;
+using System.IO;
 
 namespace LudumDare.Json
 {
     public class SceneLoader
     {
-        private GameScene scene;
-
-        public SceneLoader(string file)
+        public static GameScene Load(string file)
         {
-            scene = JsonConvert.DeserializeObject<GameScene>(file);
+            return JsonConvert.DeserializeObject<GameScene>(File.ReadAllText(file));
         }
     }
 }
