@@ -59,12 +59,12 @@ namespace LudumDare
             runButton.OnClick += (s, e) => { enabled = true; };
             FastButton pauseButton = new FastButton(new Font("Content/font.ttf"), 22, "Content/pauseButton.png", "Content/pauseButton.png", "Content/pauseButton.png") { Position = new Vector2f(50, 0), Size = new Vector2f(50, 48), Text = "", Anchor = AnchorPoints.Left | AnchorPoints.Top };
             pauseButton.OnClick += (s, e) => { enabled = false; };
-            FastButton addBoxButton = new FastButton(new Font("Content/font.ttf"), 22, "Content/boxButton.png", "Content/boxButton.png", "Content/boxButton.png") { Position = new Vector2f(100, 0), Size = new Vector2f(50, 48), Text = "", Anchor = AnchorPoints.Left | AnchorPoints.Top };
-            addBoxButton.OnClick += (s, e) => { world.CreateBox(new Vector2f(10, 10), 4, BodyType.Static); };
-            FastButton addCircleButton = new FastButton(new Font("Content/font.ttf"), 22, "Content/circleButton.png", "Content/circleButton.png", "Content/circleButton.png") { Position = new Vector2f(150, 0), Size = new Vector2f(50, 48), Text = "", Anchor = AnchorPoints.Left | AnchorPoints.Top };
-            addCircleButton.OnClick += (s, e) => { world.CreateCircle(5, 5, BodyType.Static); };
-            FastButton saveButton = new FastButton(new Font("Content/font.ttf"), 22, "Content/saveButton.png", "Content/saveButton.png", "Content/saveButton.png") { Position = new Vector2f(200, 0), Size = new Vector2f(50, 48), Text = "", Anchor = AnchorPoints.Left | AnchorPoints.Top };
+            FastButton saveButton = new FastButton(new Font("Content/font.ttf"), 22, "Content/saveButton.png", "Content/saveButton.png", "Content/saveButton.png") { Position = new Vector2f(125, 0), Size = new Vector2f(50, 48), Text = "", Anchor = AnchorPoints.Left | AnchorPoints.Top };
             saveButton.OnClick += (s, e) => { Export(); };
+            FastButton addBoxButton = new FastButton(new Font("Content/font.ttf"), 22, "Content/boxButton.png", "Content/boxButton.png", "Content/boxButton.png") { Position = new Vector2f(200, 0), Size = new Vector2f(50, 48), Text = "", Anchor = AnchorPoints.Left | AnchorPoints.Top };
+            addBoxButton.OnClick += (s, e) => { world.CreateBox(new Vector2f(10, 10), 4, BodyType.Static); };
+            FastButton addCircleButton = new FastButton(new Font("Content/font.ttf"), 22, "Content/circleButton.png", "Content/circleButton.png", "Content/circleButton.png") { Position = new Vector2f(250, 0), Size = new Vector2f(50, 48), Text = "", Anchor = AnchorPoints.Left | AnchorPoints.Top };
+            addCircleButton.OnClick += (s, e) => { world.CreateCircle(5, 5, BodyType.Static); };
 
             scene.AddComponent(bg);
             scene.AddComponent(runButton);
