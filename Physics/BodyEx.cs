@@ -11,9 +11,11 @@ namespace LudumDare.Physics
 
         public float Length;
         public Point Dimension;
+        public Dimension GameDimension;
 
         public BodyEx(Body body)
         {
+            GameDimension = LudumDare.Physics.Dimension.None;
             Body = body;
             string type;
             if (body.UserData != null)

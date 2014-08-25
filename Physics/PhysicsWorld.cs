@@ -75,5 +75,15 @@ namespace LudumDare.Physics
 
             world.Clear();
         }
+
+        public BodyEx FindBody(Body body)
+        {
+            foreach (BodyEx b in Bodies)
+            {
+                if (b.Body == body)
+                    return b;
+            }
+            return null;
+        }
     }
 }

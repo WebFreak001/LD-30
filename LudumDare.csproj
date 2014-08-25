@@ -85,6 +85,7 @@
     <Compile Include="ParticleSystem\Particle.cs" />
     <Compile Include="Json\PhysicsShape.cs" />
     <Compile Include="Physics\BodyEx.cs" />
+    <Compile Include="Physics\Dimension.cs" />
     <Compile Include="Physics\PhysicsWorld.cs" />
     <Compile Include="Json\Point.cs" />
     <Compile Include="Physics\Player.cs" />

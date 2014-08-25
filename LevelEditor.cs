@@ -31,6 +31,8 @@ namespace LudumDare
         private Body selected = null;
         private bool dragging = false;
         private ContextMenu contextMenu;
+        private object savedData;
+        private Scene messageScene;
 
         public LevelEditor()
         {
@@ -62,9 +64,9 @@ namespace LudumDare
             FastButton saveButton = new FastButton(new Font("Content/font.ttf"), 22, "Content/saveButton.png", "Content/saveButton.png", "Content/saveButton.png") { Position = new Vector2f(125, 0), Size = new Vector2f(50, 48), Text = "", Anchor = AnchorPoints.Left | AnchorPoints.Top };
             saveButton.OnClick += (s, e) => { Export(); };
             FastButton addBoxButton = new FastButton(new Font("Content/font.ttf"), 22, "Content/boxButton.png", "Content/boxButton.png", "Content/boxButton.png") { Position = new Vector2f(200, 0), Size = new Vector2f(50, 48), Text = "", Anchor = AnchorPoints.Left | AnchorPoints.Top };
-            addBoxButton.OnClick += (s, e) => { world.CreateBox(new Vector2f(10, 10), 4, BodyType.Static); };
+            addBoxButton.OnClick += (s, e) => { world.CreateBox(new Vector2f(10, 10), 4, BodyType.Static); world.Step(0); };
             FastButton addCircleButton = new FastButton(new Font("Content/font.ttf"), 22, "Content/circleButton.png", "Content/circleButton.png", "Content/circleButton.png") { Position = new Vector2f(250, 0), Size = new Vector2f(50, 48), Text = "", Anchor = AnchorPoints.Left | AnchorPoints.Top };
-            addCircleButton.OnClick += (s, e) => { world.CreateCircle(5, 5, BodyType.Static); };
+            addCircleButton.OnClick += (s, e) => { world.CreateCircle(5, 5, BodyType.Static); world.Step(0); };
 
             scene.AddComponent(bg);
             scene.AddComponent(runButton);
@@ -88,28 +90,38 @@ namespace LudumDare
             }, "Set Static");
             contextMenu.Add(() =>
             {
-                selected.Rotation += 0.34906585f;
-            }, "Rotate +20");
+                OpenDropDownDialog(selected.Clone(), "Set Dimension", (sel, res) =>
+                {
+                    BodyEx bEx = world.FindBody((Body)sel);
+                    Dimension d = Dimension.None;
+                    switch (res)
+                    {
+                        case "No Dimension":
+                            d = Dimension.None;
+                            break;
+
+                        case "Dimension 0":
+                            d = Dimension.OneO;
+                            break;
+
+                        case "Dimension X":
+                            d = Dimension.TwoX;
+                            break;
+                    }
+                    bEx.GameDimension = d;
+                }, "No Dimension", "No Dimension", "Dimension 0", "Dimension X");
+            }, "Set Dimension");
             contextMenu.Add(() =>
             {
-                selected.Rotation += 0.785398163f;
-            }, "Rotate +45");
+            }, "Set Rotation");
             contextMenu.Add(() =>
             {
-                selected.Rotation += 1.57079633f;
-            }, "Rotate +90");
+            }, "Set Size");
             contextMenu.Add(() =>
             {
-                selected.Rotation -= 0.34906585f;
-            }, "Rotate -20");
-            contextMenu.Add(() =>
-            {
-                selected.Rotation -= 0.785398163f;
-            }, "Rotate -45");
-            contextMenu.Add(() =>
-            {
-                selected.Rotation -= 1.57079633f;
-            }, "Rotate -90");
+            }, "Set Texture");
+
+            messageScene = new Scene(ScrollInputs.None);
 
             Stopwatch sw = new Stopwatch();
             TimeSpan elapsed = TimeSpan.Zero;
@@ -145,6 +157,9 @@ namespace LudumDare
                 window.SetView(v);
 
                 ui.Render(window);
+                ui.CurrentScene = messageScene;
+                ui.Render(window);
+                ui.CurrentScene = scene;
                 contextMenu.Render(window);
 
                 window.Display();
@@ -160,6 +175,14 @@ namespace LudumDare
                 }
                 sw.Reset();
             }
+        }
+
+        public void OpenDropDownDialog(object data, string title, Action<object, string> action, string defaultSelect, params string[] selects)
+        {
+            messageScene = new Scene(ScrollInputs.None);
+            messageScene.AddComponent(new FastText(new Font("Content/font.ttf"), 22) { Color = Color.Black, BackgroundColor = Colors.LightGrey, Position = new Vector2f(440, 200), TextAlignment = Alignment.MiddleCenter, Text = title, Size = new Vector2f(400, 30) });
+            messageScene.AddComponent(new RectControl() { BackgroundColor = Color.White, Size = new Vector2f(400, 300), Position = new Vector2f(440, 230) });
+            messageScene.AddComponent(new FastButton(new Font("Content/font.ttf"), 22, "Content/button.png", "Content/button_hover.png", "Content/button_pressed.png") { Size = new Vector2f(300, 30), Position = new Vector2f(490, 490) });
         }
 
         private void window_KeyReleased(object sender, KeyEventArgs e)
