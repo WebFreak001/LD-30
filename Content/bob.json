@@ -18,7 +18,8 @@
         "Friction": 0.0,
         "Mass": 235.619446,
         "Restitution": 1.1,
-        "Rotation": 0.0
+        "Rotation": 0.0,
+		"GameDimension": "OneO"
       }
     },
     {
@@ -39,7 +40,8 @@
         "Mass": 235.619446,
         "Restitution": 0,
         "Rotation": 0.0,
-		"UserData": ""
+		"UserData": "",
+		"GameDimension": "TwoX"
       }
     },
     {
@@ -59,7 +61,7 @@
         "Mass": 0,
         "Restitution": 0.0,
         "Rotation": 0.1,
-		"Category": "Dimension0"
+		"GameDimension": "OneO"
       }
     },
     {
@@ -79,7 +81,7 @@
         "Mass": 0,
         "Restitution": 0.0,
         "Rotation": -0.1,
-		"Category": "Dimension0"
+		"GameDimension": "TwoX"
       }
     },
     {
@@ -99,7 +101,7 @@
         "Mass": 0,
         "Restitution": 0.2,
         "Rotation": 0.201,
-		"Category": "Dimension0"
+		"GameDimension": "OneO"
       }
 	},
     {
@@ -119,7 +121,7 @@
         "Mass": 0,
         "Restitution": 0.2,
         "Rotation": 0,
-		"Category": "Dimension0"
+		"GameDimension": "OneO"
       }
     }
   ]

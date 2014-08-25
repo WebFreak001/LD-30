@@ -1,4 +1,5 @@
 ﻿using FarseerPhysics.Dynamics;
+using LudumDare.Physics;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace LudumDare.Json
             scene.Objects = new List<SceneObject>();
         }
 
-        public void AddBody(Body body, Point size, float? radius, string type)
+        public void AddBody(Body body, Point size, float? radius, string type, Dimension gd)
         {
             SceneObject obj = new SceneObject();
             obj.Shape = new PhysicsShape();
@@ -36,6 +37,7 @@ namespace LudumDare.Json
             obj.Shape.Restitution = body.Restitution;
             obj.Shape.Rotation = body.Rotation;
             obj.Shape.Type = body.BodyType.ToString();
+            obj.Shape.GameDimension = gd;
             obj.Shape.UserData = "";
             scene.Objects.Add(obj);
         }

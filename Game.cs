@@ -38,7 +38,7 @@ namespace LudumDare
             {
                 sw.Start();
                 window.DispatchEvents();
-                window.Clear();
+                window.Clear(Colors.SkyBlue);
                 view.Update(elapsed);
 
                 view.Render(elapsed, window, ui);

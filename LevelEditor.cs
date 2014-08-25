@@ -33,6 +33,7 @@ namespace LudumDare
         private ContextMenu contextMenu;
         private object savedData;
         private Scene messageScene;
+        private Sprite grid;
 
         public LevelEditor()
         {
@@ -50,7 +51,7 @@ namespace LudumDare
             window.KeyPressed += window_KeyPressed;
             window.KeyReleased += window_KeyReleased;
 
-            world = new PhysicsWorld();
+            world = new PhysicsWorld(true);
 
             ui = new UISceneManager();
             ui.Init(window);
@@ -63,10 +64,22 @@ namespace LudumDare
             pauseButton.OnClick += (s, e) => { enabled = false; };
             FastButton saveButton = new FastButton(new Font("Content/font.ttf"), 22, "Content/saveButton.png", "Content/saveButton.png", "Content/saveButton.png") { Position = new Vector2f(125, 0), Size = new Vector2f(50, 48), Text = "", Anchor = AnchorPoints.Left | AnchorPoints.Top };
             saveButton.OnClick += (s, e) => { Export(); };
-            FastButton addBoxButton = new FastButton(new Font("Content/font.ttf"), 22, "Content/boxButton.png", "Content/boxButton.png", "Content/boxButton.png") { Position = new Vector2f(200, 0), Size = new Vector2f(50, 48), Text = "", Anchor = AnchorPoints.Left | AnchorPoints.Top };
-            addBoxButton.OnClick += (s, e) => { world.CreateBox(new Vector2f(10, 10), 4, BodyType.Static); world.Step(0); };
-            FastButton addCircleButton = new FastButton(new Font("Content/font.ttf"), 22, "Content/circleButton.png", "Content/circleButton.png", "Content/circleButton.png") { Position = new Vector2f(250, 0), Size = new Vector2f(50, 48), Text = "", Anchor = AnchorPoints.Left | AnchorPoints.Top };
-            addCircleButton.OnClick += (s, e) => { world.CreateCircle(5, 5, BodyType.Static); world.Step(0); };
+            FastButton loadButton = new FastButton(new Font("Content/font.ttf"), 22, "Content/loadButton.png", "Content/loadButton.png", "Content/loadButton.png") { Position = new Vector2f(175, 0), Size = new Vector2f(50, 48), Text = "", Anchor = AnchorPoints.Left | AnchorPoints.Top };
+            loadButton.OnClick += (s, e) =>
+            {
+                var ofd = new System.Windows.Forms.OpenFileDialog();
+                ofd.Filter = "Level Files (*.json)|*.json";
+                ofd.InitialDirectory = Directory.GetCurrentDirectory();
+                var r = ofd.ShowDialog();
+                if (r == System.Windows.Forms.DialogResult.OK)
+                {
+                    Import(ofd.FileName);
+                }
+            };
+            FastButton addBoxButton = new FastButton(new Font("Content/font.ttf"), 22, "Content/boxButton.png", "Content/boxButton.png", "Content/boxButton.png") { Position = new Vector2f(250, 0), Size = new Vector2f(50, 48), Text = "", Anchor = AnchorPoints.Left | AnchorPoints.Top };
+            addBoxButton.OnClick += (s, e) => { world.CreateBox(new Vector2f(10, 10), 4, BodyType.Static).Position = new Vector2(offset.X, offset.Y) * -0.1f; world.Step(0); };
+            FastButton addCircleButton = new FastButton(new Font("Content/font.ttf"), 22, "Content/circleButton.png", "Content/circleButton.png", "Content/circleButton.png") { Position = new Vector2f(300, 0), Size = new Vector2f(50, 48), Text = "", Anchor = AnchorPoints.Left | AnchorPoints.Top };
+            addCircleButton.OnClick += (s, e) => { world.CreateCircle(5, 5, BodyType.Static).Position = new Vector2(offset.X, offset.Y) * -0.1f; world.Step(0); };
 
             scene.AddComponent(bg);
             scene.AddComponent(runButton);
@@ -74,10 +87,13 @@ namespace LudumDare
             scene.AddComponent(addBoxButton);
             scene.AddComponent(addCircleButton);
             scene.AddComponent(saveButton);
-            scene.AddComponent(new WorldHierachyRenderer(world) { Size = new Vector2f(300, 670), Position = new Vector2f(0, 50), BackgroundColor = Colors.Snow });
+            scene.AddComponent(loadButton);
+            // scene.AddComponent(new WorldHierachyRenderer(world) { Size = new Vector2f(300, 670), Position = new Vector2f(0, 50), BackgroundColor = Colors.Snow });
+            // Does not update on change dynamic/static
             ui.CurrentScene = scene;
-            Import();
-            Export();
+
+            grid = new Sprite(new Texture("Content/grid.png"));
+            grid.Origin = new Vector2f(512, 512);
 
             contextMenu = new ContextMenu();
             contextMenu.Add(() =>
@@ -90,36 +106,36 @@ namespace LudumDare
             }, "Set Static");
             contextMenu.Add(() =>
             {
-                OpenDropDownDialog(selected.Clone(), "Set Dimension", (sel, res) =>
-                {
-                    BodyEx bEx = world.FindBody((Body)sel);
-                    Dimension d = Dimension.None;
-                    switch (res)
-                    {
-                        case "No Dimension":
-                            d = Dimension.None;
-                            break;
-
-                        case "Dimension 0":
-                            d = Dimension.OneO;
-                            break;
-
-                        case "Dimension X":
-                            d = Dimension.TwoX;
-                            break;
-                    }
-                    bEx.GameDimension = d;
-                }, "No Dimension", "No Dimension", "Dimension 0", "Dimension X");
-            }, "Set Dimension");
+                world.FindBody(selected).GameDimension = Dimension.None;
+            }, "Set No Dimension");
             contextMenu.Add(() =>
             {
-            }, "Set Rotation");
+                world.FindBody(selected).GameDimension = world.FindBody(selected).GameDimension == Dimension.OneO ? Dimension.TwoX : Dimension.OneO;
+            }, "Switch Dimension");
             contextMenu.Add(() =>
             {
-            }, "Set Size");
+                selected.Rotation += 0.0872664626f;
+            }, "+5 Rotation");
             contextMenu.Add(() =>
             {
-            }, "Set Texture");
+                selected.Rotation += 0.785398163f;
+            }, "+45 Rotation");
+            contextMenu.Add(() =>
+            {
+                selected.Rotation -= 0.0872664626f;
+            }, "-5 Rotation");
+            contextMenu.Add(() =>
+            {
+                selected.Rotation -= 0.785398163f;
+            }, "-45 Rotation");
+            contextMenu.Add(() =>
+            {
+                world.Copy(selected, new Vector2(offset.X, offset.Y) * -0.1f);
+            }, "Duplicate");
+            contextMenu.Add(() =>
+            {
+                world.Remove(selected);
+            }, "Remove");
 
             messageScene = new Scene(ScrollInputs.None);
 
@@ -143,10 +159,12 @@ namespace LudumDare
 
                 v = window.GetView();
                 v.Zoom(zoom);
-                v.Center = (world.CamLock == null ? (new Vector2f(640, 360) - offset) : new Vector2f(world.CamLock.Position.X * 10, world.CamLock.Position.Y * 10));
+                v.Center = (world.CamLock == null ? -offset : new Vector2f(world.CamLock.Position.X * 10, world.CamLock.Position.Y * 10));
                 if (world.CamLock != null) v.Rotation = world.CamLock.Rotation * 57.2957795f;
                 else v.Rotation = 0;
                 window.SetView(v);
+
+                window.Draw(grid);
 
                 world.Render(window);
 
@@ -230,7 +248,8 @@ namespace LudumDare
         {
             if ((e.Button == Mouse.Button.Left || e.Button == Mouse.Button.Right) && !contextMenu.IsOpen)
             {
-                Vector2f point = ((new Vector2f(e.X, e.Y) - offset) * zoom) * 0.1f;
+                Vector2f point = ((new Vector2f(e.X, e.Y) - offset - (new Vector2f(window.Size.X, window.Size.Y) * 0.5f))) * 0.1f;
+                Console.WriteLine(point);
                 AABB aabb = new AABB(new Vector2(point.X, point.Y), 1, 1);
 
                 world.world.QueryAABB((fix) =>
@@ -280,29 +299,33 @@ namespace LudumDare
             window.SetView(new View(new FloatRect(0, 0, e.Width, e.Height)));
         }
 
-        public void Import()
+        public void Import(string file)
         {
             world.Clear();
-            SceneDeserializer s = new SceneDeserializer(JsonConvert.DeserializeObject<GameScene>(File.ReadAllText("Content/bob.json")));
+            SceneDeserializer s = new SceneDeserializer(JsonConvert.DeserializeObject<GameScene>(File.ReadAllText(file)));
             s.AddObjects(world);
         }
 
-        public void Export()
+        public void Export(int i = 0)
         {
-            string[] files = Directory.GetFiles("Content/", "*.json");
-            string max = files.Where(file => file.StartsWith("LevelSave")).Select(name => name.Substring(9).Trim()).Select(name => name.Substring(0, name.IndexOf('.'))).Max();
-            int maxN = 0;
-            string save = "LevelSave";
-            if (int.TryParse(max, out maxN))
+            i++;
+            string save = "Content/LevelSave" + i + ".json";
+            if (File.Exists(save))
             {
-                save += max + 1;
+                Export(i);
+                return;
             }
-            else
+
+            Console.WriteLine("Saving in " + save);
+
+            SceneSerializer serializer = new SceneSerializer(save);
+
+            foreach (BodyEx body in world.Bodies)
             {
-                save += "1";
+                serializer.AddBody(body.Body, body.Dimension, body.Length, body.Shape.ToString().ToLower(), body.GameDimension);
             }
-            save += ".json";
-            Console.WriteLine(save);
+
+            File.WriteAllText(save, JsonConvert.SerializeObject(serializer.Scene, Formatting.Indented, new JsonSerializerSettings() { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.Ignore }));
         }
 
         private void window_Closed(object sender, EventArgs e)

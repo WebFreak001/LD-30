@@ -79,7 +79,7 @@ namespace LudumDare.GameView.Views
 
         private void PlayButton_OnClick(object sender, EventArgs e)
         {
-            Next(this, new InGameView());
+            Next(this, new InGameView("Content/Level1/LevelSave12.json"));
             Dispose();
         }
 

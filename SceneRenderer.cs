@@ -1,5 +1,6 @@
 ﻿using FarseerPhysics.Dynamics;
 using LudumDare.Json;
+using LudumDare.Physics;
 using Microsoft.Xna.Framework;
 using SFML.Graphics;
 using SFML.Window;
@@ -30,12 +31,13 @@ namespace LudumDare
 
         public void Render(RenderTarget target)
         {
+            Dimension d;
             foreach (Body body in world.BodyList)
             {
                 string type;
                 float radius;
                 Point dimension;
-                SceneDeserializer.GetUserData(body.UserData.ToString(), out type, out radius, out dimension);
+                SceneDeserializer.GetUserData(body.UserData.ToString(), out type, out radius, out dimension, out d);
 
                 if (type == "circle")
                 {

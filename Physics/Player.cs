@@ -8,24 +8,27 @@ namespace LudumDare.Physics
     {
         public Body PhysObj;
 
-        private bool dimension0 = true;
+        private bool dimension0 = false;
+
+        private PhysicsWorld world;
 
         public Player(PhysicsWorld world)
         {
-            PhysObj = BodyFactory.CreateCapsule(world.world, 5, 3, 4, "capsule;5;3;player");
+            PhysObj = BodyFactory.CreateCapsule(world.world, 5, 3, 400, "capsule;5;3;None;player");
             PhysObj.BodyType = BodyType.Dynamic;
             PhysObj.Position = new Vector2(10, 0);
             PhysObj.IsBullet = true;
             PhysObj.FixedRotation = true;
-            PhysObj.Friction = 0;
-            PhysObj.CollidesWith = Category.Cat1 | Category.Cat10;
-            world.Add(PhysObj);
+            PhysObj.Friction = 0.8f;
+            PhysObj.Restitution = 0;
+            world.Add(new BodyEx(PhysObj));
+            this.world = world;
         }
 
         public void SwapDimension()
         {
             dimension0 = !dimension0;
-            PhysObj.CollidesWith = (dimension0 ? Category.Cat1 : Category.Cat2) | Category.Cat10;
+            world.ChangeDimension(dimension0);
         }
     }
 }

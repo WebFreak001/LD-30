@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using LudumDare.Physics;
+using System.ComponentModel;
 
 namespace LudumDare.Json
 {
@@ -41,7 +42,7 @@ namespace LudumDare.Json
         [DefaultValue(false)]
         public bool IgnoreGravity { get; set; }
 
-        [DefaultValue(typeof(ColliderCategory), "Generic")]
-        public ColliderCategory Category { get; set; }
+        [DefaultValue(typeof(Dimension), "None")]
+        public Dimension GameDimension { get; set; }
     }
 }

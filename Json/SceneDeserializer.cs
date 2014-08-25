@@ -44,15 +44,16 @@ namespace LudumDare.Json
                 body.IsBullet = shape.Bullet;
                 body.Restitution = shape.Restitution;
                 body.Rotation = shape.Rotation;
-                body.UserData = (shape.Mesh.Trim().ToLower() == "circle" ? "circle;" : "box;") + (shape.Mesh.Trim().ToLower() == "circle" ? shape.Radius + ";" : shape.Dimension.X + ";" + shape.Dimension.Y + ";") + shape.UserData;
+                body.UserData = (shape.Mesh.Trim().ToLower() == "circle" ? "circle;" : "box;") + (shape.Mesh.Trim().ToLower() == "circle" ? shape.Radius + ";" : shape.Dimension.X + ";" + shape.Dimension.Y + ";") + shape.GameDimension + ";" + shape.UserData;
                 body.IgnoreGravity = shape.IgnoreGravity;
+                BodyEx bodyEx = new BodyEx(body, obj.Texture);
 
-                world.Add(body);
+                world.Add(bodyEx);
                 Console.WriteLine("Body created: " + body.UserData);
             }
         }
 
-        public static void GetUserData(string userData, out string type, out float radius, out Point dimension)
+        public static void GetUserData(string userData, out string type, out float radius, out Point dimension, out Dimension gameDimension)
         {
             string[] splits = userData.Split(';');
             type = splits[0].Trim().ToLower() == "circle" ? "circle" : (splits[0].Trim().ToLower() == "capsule" ? "capsule" : "box");
@@ -60,16 +61,19 @@ namespace LudumDare.Json
             {
                 radius = float.Parse(splits[1]);
                 dimension = new Point();
+                gameDimension = (Dimension)Enum.Parse(typeof(Dimension), splits[2]);
             }
             else if (type == "box")
             {
                 radius = 0;
                 dimension = new Point(float.Parse(splits[1]), float.Parse(splits[2]));
+                gameDimension = (Dimension)Enum.Parse(typeof(Dimension), splits[3]);
             }
             else
             {
                 radius = 0;
                 dimension = new Point(float.Parse(splits[1]), float.Parse(splits[2]));
+                gameDimension = (Dimension)Enum.Parse(typeof(Dimension), splits[3]);
             }
         }
     }

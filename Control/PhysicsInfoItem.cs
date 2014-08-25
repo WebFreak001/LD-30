@@ -1,5 +1,6 @@
 ﻿using FarseerPhysics.Dynamics;
 using LudumDare.Json;
+using LudumDare.Physics;
 using Microsoft.Xna.Framework;
 using SFML.Graphics;
 using SFML.Window;
@@ -71,7 +72,8 @@ namespace LudumDare.Control
             Body = body;
             float radius;
             Point dimension;
-            SceneDeserializer.GetUserData(body.UserData.ToString(), out type, out radius, out dimension);
+            Dimension d;
+            SceneDeserializer.GetUserData(body.UserData.ToString(), out type, out radius, out dimension, out d);
 
             text = new FastText(new Font("Content/font.ttf"), 20)
             {
