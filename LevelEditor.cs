@@ -322,7 +322,7 @@ namespace LudumDare
 
             foreach (BodyEx body in world.Bodies)
             {
-                serializer.AddBody(body.Body, body.Dimension, body.Length, body.Shape.ToString().ToLower(), body.GameDimension);
+                serializer.AddBody(body);
             }
 
             File.WriteAllText(save, JsonConvert.SerializeObject(serializer.Scene, Formatting.Indented, new JsonSerializerSettings() { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.Ignore }));

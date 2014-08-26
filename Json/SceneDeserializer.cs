@@ -2,23 +2,24 @@
 using FarseerPhysics.Factories;
 using LudumDare.Physics;
 using Microsoft.Xna.Framework;
+using SFML.Graphics;
 using System;
 
 namespace LudumDare.Json
 {
     public class SceneDeserializer
     {
-        private GameScene scene;
+        public GameScene Scene;
 
         public SceneDeserializer(GameScene scene)
         {
-            this.scene = scene;
+            this.Scene = scene;
         }
 
         public void AddObjects(PhysicsWorld world)
         {
-            Console.WriteLine("Generating Scene " + scene.Name);
-            foreach (SceneObject obj in scene.Objects)
+            Console.WriteLine("Generating Scene " + Scene.Name);
+            foreach (SceneObject obj in Scene.Objects)
             {
                 PhysicsShape shape = obj.Shape;
                 Body body = null;
@@ -46,7 +47,9 @@ namespace LudumDare.Json
                 body.Rotation = shape.Rotation;
                 body.UserData = (shape.Mesh.Trim().ToLower() == "circle" ? "circle;" : "box;") + (shape.Mesh.Trim().ToLower() == "circle" ? shape.Radius + ";" : shape.Dimension.X + ";" + shape.Dimension.Y + ";") + shape.GameDimension + ";" + shape.UserData;
                 body.IgnoreGravity = shape.IgnoreGravity;
-                BodyEx bodyEx = new BodyEx(body, obj.Texture);
+                BodyEx bodyEx;
+                if (obj.Texture != null && obj.Texture != "") bodyEx = new BodyEx(body, obj.Texture, new IntRect((int)obj.TexStart.X, (int)obj.TexStart.Y, (int)obj.TexSize.X, (int)obj.TexSize.Y));
+                else bodyEx = new BodyEx(body);
 
                 world.Add(bodyEx);
                 Console.WriteLine("Body created: " + body.UserData);

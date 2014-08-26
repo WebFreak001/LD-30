@@ -21,24 +21,27 @@ namespace LudumDare.Json
             scene.Objects = new List<SceneObject>();
         }
 
-        public void AddBody(Body body, Point size, float? radius, string type, Dimension gd)
+        public void AddBody(BodyEx body)
         {
             SceneObject obj = new SceneObject();
             obj.Shape = new PhysicsShape();
-            obj.Shape.Bullet = body.IsBullet;
-            if (size != null) obj.Shape.Dimension = size;
-            obj.Shape.FixedRotation = body.FixedRotation;
-            obj.Shape.Friction = body.Friction;
-            obj.Shape.IgnoreGravity = body.IgnoreGravity;
-            obj.Shape.Mass = body.Mass;
-            obj.Shape.Mesh = type;
-            obj.Shape.Position = new Point(body.Position.X, body.Position.Y);
-            if (radius.HasValue) obj.Shape.Radius = radius.Value;
-            obj.Shape.Restitution = body.Restitution;
-            obj.Shape.Rotation = body.Rotation;
-            obj.Shape.Type = body.BodyType.ToString();
-            obj.Shape.GameDimension = gd;
+            obj.Shape.Bullet = body.Body.IsBullet;
+            obj.Shape.Dimension = body.Dimension;
+            obj.Shape.FixedRotation = body.Body.FixedRotation;
+            obj.Shape.Friction = body.Body.Friction;
+            obj.Shape.IgnoreGravity = body.Body.IgnoreGravity;
+            obj.Shape.Mass = body.Body.Mass;
+            obj.Shape.Mesh = body.Shape.ToString().ToLower();
+            obj.Shape.Position = new Point(body.Body.Position.X, body.Body.Position.Y);
+            obj.Shape.Radius = body.Length;
+            obj.Shape.Restitution = body.Body.Restitution;
+            obj.Shape.Rotation = body.Body.Rotation;
+            obj.Shape.Type = body.Body.BodyType.ToString();
+            obj.Shape.GameDimension = body.GameDimension;
             obj.Shape.UserData = "";
+            obj.Texture = body.TexPath;
+            obj.TexStart = new Point(body.TexRect.Left, body.TexRect.Top);
+            obj.TexSize = new Point(body.TexRect.Width, body.TexRect.Height);
             scene.Objects.Add(obj);
         }
 

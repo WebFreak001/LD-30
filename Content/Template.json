@@ -1,0 +1,120 @@
+{
+  "Name": "Content/LevelSave3.json",
+  "Created": "2014-08-25T18:14:54.7453898+02:00",
+  "Objects": [
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 2.0,
+          "Y": 10.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": -69.0,
+          "Y": 81.29998
+        },
+        "Friction": 0.2,
+        "Mass": 8000.0,
+        "Restitution": 0.0,
+        "Rotation": 0.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 4.0,
+          "Y": 10.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": -68.9999847,
+          "Y": 70.2
+        },
+        "Friction": 0.2,
+        "Mass": 16000.0,
+        "Restitution": 0.0,
+        "Rotation": 0.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 6.0,
+          "Y": 10.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": -68.9999847,
+          "Y": 25.90001
+        },
+        "Friction": 0.2,
+        "Mass": 24000.0,
+        "Restitution": 0.0,
+        "Rotation": 0.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 8.0,
+          "Y": 10.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": -68.99996,
+          "Y": 48.1000023
+        },
+        "Friction": 0.2,
+        "Mass": 32000.0,
+        "Restitution": 0.0,
+        "Rotation": 0.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 10.0,
+          "Y": 10.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": -68.9,
+          "Y": 59.1000175
+        },
+        "Friction": 0.2,
+        "Mass": 40000.0,
+        "Restitution": 0.0,
+        "Rotation": 0.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 30.0,
+          "Y": 10.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": -68.99999,
+          "Y": 37.0
+        },
+        "Friction": 0.2,
+        "Mass": 120000.0,
+        "Restitution": 0.0,
+        "Rotation": 0.0
+      }
+    }
+  ]
+}

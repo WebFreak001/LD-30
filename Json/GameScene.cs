@@ -9,6 +9,12 @@ namespace LudumDare.Json
 
         public DateTime Created { get; set; }
 
+        public Point StartCoords { get; set; }
+
+        public Point FinishLow { get; set; }
+
+        public Point FinishHigh { get; set; }
+
         public List<SceneObject> Objects { get; set; }
     }
 }

@@ -1,0 +1,1476 @@
+{
+  "Name": "Example Level 1",
+  "Created": "2014-08-26T00:47:31.5050862+02:00",
+  "Objects": [
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 100.0,
+          "Y": 40.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 2.80006981,
+          "Y": 62.7999725
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0
+      },
+      "Texture": "Content/fillTex.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 1000.0,
+        "Y": 400.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 10.0,
+          "Y": 70.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": -52.19989,
+          "Y": 9.900034
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0
+      },
+      "Texture": "Content/fillTex.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 100.0,
+        "Y": 700.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 20.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 16.7999744,
+          "Y": 13.3000107
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0,
+        "GameDimension": 2
+      },
+      "Texture": "Content/parallelSlabMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 400.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 20.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": -9.199999,
+          "Y": -0.7
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0,
+        "GameDimension": 1
+      },
+      "Texture": "Content/stoneHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 400.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 20.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 27.10003,
+          "Y": -18.9000244
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": -0.174533054,
+        "GameDimension": 1
+      },
+      "Texture": "Content/stoneHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 400.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 10.0,
+          "Y": 70.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 53.9000359,
+          "Y": 7.799992
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0
+      },
+      "Texture": "Content/fillTex.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 100.0,
+        "Y": 700.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 100.0,
+          "Y": 40.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 102.700081,
+          "Y": 62.80007
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0
+      },
+      "Texture": "Content/fillTex.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 1000.0,
+        "Y": 400.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 10.0,
+          "Y": 70.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 241.29985,
+          "Y": 7.799998
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0
+      },
+      "Texture": "Content/fillTex.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 100.0,
+        "Y": 700.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 100.0,
+          "Y": 40.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 202.599945,
+          "Y": 62.7999954
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0
+      },
+      "Texture": "Content/fillTex.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 1000.0,
+        "Y": 400.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 20.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 90.09996,
+          "Y": -26.6000214
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0,
+        "GameDimension": 1
+      },
+      "Texture": "Content/stoneHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 400.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 20.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 68.8998,
+          "Y": -10.9999924
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0,
+        "GameDimension": 2
+      },
+      "Texture": "Content/parallelSlabMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 400.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 20.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 68.9000854,
+          "Y": 3.39999628
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0,
+        "GameDimension": 1
+      },
+      "Texture": "Content/stoneHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 400.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 20.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 68.90006,
+          "Y": 18.399992
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0,
+        "GameDimension": 2
+      },
+      "Texture": "Content/parallelSlabMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 400.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 20.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 68.90007,
+          "Y": 32.7999954
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0,
+        "GameDimension": 1
+      },
+      "Texture": "Content/stoneHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 400.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 10.0,
+          "Y": 70.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 241.300034,
+          "Y": -62.2000046
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 1.0,
+        "Rotation": 0.0,
+        "GameDimension": 2
+      },
+      "Texture": "Content/fence.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 40.0,
+        "Y": 315.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 100.0,
+          "Y": 40.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 296.299957,
+          "Y": -7.20000029
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0
+      },
+      "Texture": "Content/fillTex.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 1000.0,
+        "Y": 400.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 10.0,
+          "Y": 10.0
+        },
+        "Type": "Dynamic",
+        "Position": {
+          "X": -15.6338081,
+          "Y": 37.44083
+        },
+        "FixedRotation": true,
+        "Friction": 1.0,
+        "Bullet": true,
+        "Mass": 4,
+        "Restitution": 0.0,
+        "Rotation": 0.000515310268
+      },
+      "Texture": "Content/box.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 70.0,
+        "Y": 70.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 20.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 136.799988,
+          "Y": -35.49998
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0,
+        "GameDimension": 1
+      },
+      "Texture": "Content/stoneHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 400.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 20.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 177.900162,
+          "Y": -26.7000084
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0,
+        "GameDimension": 2
+      },
+      "Texture": "Content/parallelSlabMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 400.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 10.0,
+          "Y": 10.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 245.799973,
+          "Y": -102.099991
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0,
+        "GameDimension": 2
+      },
+      "Texture": "Content/boxAlt.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 70.0,
+        "Y": 70.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 10.0,
+          "Y": 10.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 235.90004,
+          "Y": -102.199989
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0,
+        "GameDimension": 2
+      },
+      "Texture": "Content/boxAlt.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 70.0,
+        "Y": 70.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 50.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 280.500031,
+          "Y": -43.900013
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0
+      },
+      "Texture": "Content/metalHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 875.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 50.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 322.3997,
+          "Y": -61.3000031
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": -0.7853982
+      },
+      "Texture": "Content/metalHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 875.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 50.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 335.000336,
+          "Y": -44.10002
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": -0.7853982
+      },
+      "Texture": "Content/metalHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 875.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 50.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 377.0,
+          "Y": -61.5999947
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0,
+        "GameDimension": 1
+      },
+      "Texture": "Content/metalHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 875.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 25.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 351.8999,
+          "Y": -78.7999954
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0
+      },
+      "Texture": "Content/metalHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 437.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 25.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 377.000031,
+          "Y": -80.79995
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0,
+        "GameDimension": 1
+      },
+      "Texture": "Content/metalHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 437.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 25.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 397.499817,
+          "Y": -70.20001
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.7853982
+      },
+      "Texture": "Content/metalHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 437.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 50.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 377.89975,
+          "Y": 63.9999237
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0,
+        "GameDimension": 2
+      },
+      "Texture": "Content/metalHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 875.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 25.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 348.59967,
+          "Y": -95.7
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0,
+        "GameDimension": 2
+      },
+      "Texture": "Content/metalHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 437.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 25.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 377.399841,
+          "Y": -111.699951
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0,
+        "GameDimension": 1
+      },
+      "Texture": "Content/metalHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 437.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 25.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 348.699829,
+          "Y": -130.700043
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0,
+        "GameDimension": 1
+      },
+      "Texture": "Content/metalHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 437.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 20.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": -22.2000065,
+          "Y": 46.7999268
+        },
+        "Friction": 0.2,
+        "Mass": 02,
+        "Restitution": 0.0,
+        "Rotation": 1.57079637
+      },
+      "Texture": "Content/grassHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 20.0,
+        "Y": 2.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 20.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 33.8000031,
+          "Y": 46.8000069
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": -1.57079637
+      },
+      "Texture": "Content/grassHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 20.0,
+        "Y": 2.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 10.0,
+          "Y": 70.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": -52.2,
+          "Y": -60.0999947
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0
+      },
+      "Texture": "Content/fillTex.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 100.0,
+        "Y": 700.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 50.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 256.39978,
+          "Y": -69.79997
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": -1.57079637
+      },
+      "Texture": "Content/metalHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 875.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 10.0,
+          "Y": 10.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 255.699844,
+          "Y": -99.80001
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0,
+        "GameDimension": 2
+      },
+      "Texture": "Content/boxAlt.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 70.0,
+        "Y": 70.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 25.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 256.39975,
+          "Y": -39.6999474
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 1.57079637,
+        "GameDimension": 2
+      },
+      "Texture": "Content/metalHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 437.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 50.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 353.899933,
+          "Y": 38.00001
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": -1.57079637,
+        "GameDimension": 2
+      },
+      "Texture": "Content/metalHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 875.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 25.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 340.3999,
+          "Y": 14.0000114
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0
+      },
+      "Texture": "Content/metalHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 437.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 50.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 427.899841,
+          "Y": 63.9999847
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0,
+        "GameDimension": 2
+      },
+      "Texture": "Content/metalHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 875.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 25.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 489.700348,
+          "Y": 59.6999741
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": -0.17453292
+      },
+      "Texture": "Content/metalHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 437.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 25.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 512.700867,
+          "Y": 50.9999771
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": -0.34906584
+      },
+      "Texture": "Content/metalHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 437.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 25.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 465.099945,
+          "Y": 60.7000046
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": -0.08726646
+      },
+      "Texture": "Content/metalHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 437.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 25.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 561.900146,
+          "Y": 41.0000038
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": -0.08726646
+      },
+      "Texture": "Content/metalHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 437.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 25.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 537.400146,
+          "Y": 46.7999763
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": -0.17453292
+      },
+      "Texture": "Content/metalHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 437.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 25.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 467.999939,
+          "Y": 46.00003
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 1.48352993,
+        "GameDimension": 1
+      },
+      "Texture": "Content/metalHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 437.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 25.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 497.000122,
+          "Y": 41.7999763
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 1.308997,
+        "GameDimension": 2
+      },
+      "Texture": "Content/metalHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 437.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 25.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 546.6998,
+          "Y": 30.3999729
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 1.48352993,
+        "GameDimension": 1
+      },
+      "Texture": "Content/metalHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 437.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 50.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 599.399963,
+          "Y": 42.3999825
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": 0.0,
+        "GameDimension": 2
+      },
+      "Texture": "Content/metalHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 875.0,
+        "Y": 40.0
+      }
+    },
+    {
+      "Shape": {
+        "Mesh": "box",
+        "Radius": 0.0,
+        "Dimension": {
+          "X": 50.0,
+          "Y": 2.0
+        },
+        "Type": "Static",
+        "Position": {
+          "X": 623.2999,
+          "Y": 15.9999952
+        },
+        "Friction": 0.2,
+        "Mass": 0,
+        "Restitution": 0.0,
+        "Rotation": -1.57079637,
+        "GameDimension": 2
+      },
+      "Texture": "Content/metalHalfMid.png",
+      "TexStart": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TexSize": {
+        "X": 875.0,
+        "Y": 40.0
+      }
+    }
+  ],
+  "FinishLow": {
+	"X": 590,
+	"Y": -10
+  },
+  "FinishHigh": {
+    "X": 620,
+    "Y": 50
+  },
+  "StartCoords": {
+    "X": -40,
+    "Y": 35
+  }
+}

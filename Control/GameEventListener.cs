@@ -37,6 +37,8 @@ namespace LudumDare.Control
 
         public Color BackgroundColor { get; set; }
 
+        private float delta;
+
         private PhysicsWorld world;
         private Player player;
         private bool onGround;
@@ -44,10 +46,18 @@ namespace LudumDare.Control
         private bool switchReleased = true;
         private bool Left, Right;
 
+        public event EventHandler OnWin;
+
         public GameEventListener(PhysicsWorld world, Player player)
         {
             this.world = world;
             this.player = player;
+            player.OnWin += player_OnWin;
+        }
+
+        private void player_OnWin(object sender, EventArgs e)
+        {
+            OnWin(sender, e);
         }
 
         public void HandleKeyDown(Keyboard.Key key, bool Ctrl, bool Shift, bool Alt, bool Windows)
@@ -57,7 +67,7 @@ namespace LudumDare.Control
                 CheckOnGround();
                 if (onGround && lastJump < DateTime.Now - TimeSpan.FromSeconds(0.3))
                 {
-                    player.PhysObj.LinearVelocity += new Vector2(0, -32);
+                    player.PhysObj.LinearVelocity += new Vector2(0, -35);
                     lastJump = DateTime.Now;
                 }
             }
@@ -96,7 +106,7 @@ namespace LudumDare.Control
                         }
                     }
             }
-            onGround = closest < 0.6f;
+            onGround = closest < 0.8f;
         }
 
         public void HandleKeyUp(Keyboard.Key key, bool Ctrl, bool Shift, bool Alt, bool Windows)
@@ -127,15 +137,16 @@ namespace LudumDare.Control
 
         public void Update(float delta)
         {
+            this.delta = delta;
             CheckOnGround();
-            if (Left && onGround && player.PhysObj.LinearVelocity.X > -20) player.PhysObj.LinearVelocity += new Vector2(-0.3f, 0) * delta;
-            if (Right && onGround && player.PhysObj.LinearVelocity.X < 20) player.PhysObj.LinearVelocity += new Vector2(0.3f, 0) * delta;
-            if (Left && onGround) player.PhysObj.LinearVelocity += new Vector2(-0.01f, 0) * delta;
-            if (Right && onGround) player.PhysObj.LinearVelocity += new Vector2(0.01f, 0) * delta;
-            if (Left && !onGround) player.PhysObj.LinearVelocity += new Vector2(-0.01f, 0) * delta;
-            if (Right && !onGround) player.PhysObj.LinearVelocity += new Vector2(0.01f, 0) * delta;
-            if (!onGround) player.PhysObj.LinearVelocity += new Vector2(0, 0.01f) * delta;
-            if (onGround && !Left && !Right) player.PhysObj.LinearVelocity = new Vector2(player.PhysObj.LinearVelocity.X * 0.1f, player.PhysObj.LinearVelocity.Y);
+            if (Left && onGround && player.PhysObj.LinearVelocity.X > -20) player.PhysObj.LinearVelocity += new Vector2(-0.6f, 0) * delta;
+            if (Right && onGround && player.PhysObj.LinearVelocity.X < 20) player.PhysObj.LinearVelocity += new Vector2(0.6f, 0) * delta;
+            if (Left && onGround) player.PhysObj.LinearVelocity += new Vector2(-0.02f, 0) * delta;
+            if (Right && onGround) player.PhysObj.LinearVelocity += new Vector2(0.02f, 0) * delta;
+            if (Left && !onGround) player.PhysObj.LinearVelocity += new Vector2(-0.04f, 0) * delta;
+            if (Right && !onGround) player.PhysObj.LinearVelocity += new Vector2(0.04f, 0) * delta;
+            if (!onGround) player.PhysObj.LinearVelocity += new Vector2(0, 0.02f) * delta;
+            if (onGround && !Left && !Right) player.PhysObj.LinearVelocity = new Vector2(player.PhysObj.LinearVelocity.X * 0.5f, player.PhysObj.LinearVelocity.Y);
             if (player.PhysObj.LinearVelocity.X > 35) player.PhysObj.LinearVelocity = new Vector2(35, player.PhysObj.LinearVelocity.Y);
             if (player.PhysObj.LinearVelocity.X < -35) player.PhysObj.LinearVelocity = new Vector2(-35, player.PhysObj.LinearVelocity.Y);
         }

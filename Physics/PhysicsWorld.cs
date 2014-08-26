@@ -83,15 +83,25 @@ namespace LudumDare.Physics
                 byte b = body.GameDimension == Dimension.None ? (byte)255 : (byte)0;
                 byte g = body.GameDimension == Dimension.OneO ? (byte)255 : (byte)0;
                 byte r = body.GameDimension == Dimension.TwoX ? (byte)255 : (byte)0;
+                byte a = 255;
+                if (body.GameDimension == Dimension.OneO && !dim0)
+                {
+                    a = 64;
+                }
+                if (body.GameDimension == Dimension.TwoX && dim0)
+                {
+                    a = 64;
+                }
                 if (body.Shape == DisplayShape.Circle)
                 {
-                    unitCircle.Scale = new Vector2f(body.Length, body.Length) * 2;
                     unitCircle.Position = new Vector2f(body.Body.Position.X * 10, body.Body.Position.Y * 10);
+                    unitCircle.Scale = new Vector2f(body.Length, body.Length) * 2;
                     unitCircle.Rotation = MathHelper.ToDegrees(body.Body.Rotation);
                     unitCircle.FillColor = new Color(r, g, b, 255);
                     if (body.Tex != null)
                     {
-                        unitCircle.FillColor = new Color(255, 255, 255, 255);
+                        unitCircle.FillColor = new Color(255, 255, 255, a);
+                        unitCircle.TextureRect = body.TexRect;
                         unitCircle.Texture = body.Tex;
                     }
                     else
@@ -109,7 +119,8 @@ namespace LudumDare.Physics
                     unitRect.FillColor = new Color(r, g, b, 255);
                     if (body.Tex != null)
                     {
-                        unitRect.FillColor = new Color(255, 255, 255, 255);
+                        unitRect.FillColor = new Color(255, 255, 255, a);
+                        unitRect.TextureRect = body.TexRect;
                         unitRect.Texture = body.Tex;
                     }
                     else
@@ -118,24 +129,6 @@ namespace LudumDare.Physics
                         unitRect.Texture = null;
                     }
                     target.Draw(unitRect);
-                }
-                else if (body.Shape == DisplayShape.Capsule)
-                {
-                    unitCircle.Scale = new Vector2f(body.Dimension.Y, body.Dimension.Y) * 2;
-                    unitCircle.Position = new Vector2f(body.Body.Position.X * 10, body.Body.Position.Y * 10 - body.Dimension.X * 5);
-                    if (body.Tex != null)
-                    {
-                        unitCircle.FillColor = new Color(255, 255, 255, 255);
-                        unitCircle.Texture = body.Tex;
-                    }
-                    else
-                    {
-                        unitCircle.FillColor = new Color(r, g, b, 255);
-                        unitCircle.Texture = null;
-                    }
-                    target.Draw(unitCircle);
-                    unitCircle.Position = new Vector2f(body.Body.Position.X * 10, body.Body.Position.Y * 10 + body.Dimension.X * 5);
-                    target.Draw(unitCircle);
                 }
             }
         }
@@ -164,6 +157,7 @@ namespace LudumDare.Physics
                 OnClear(this, EventArgs.Empty);
 
             world.Clear();
+            Bodies.Clear();
         }
 
         public BodyEx FindBody(Body body)
@@ -211,7 +205,11 @@ namespace LudumDare.Physics
             copy.Rotation = body.Rotation;
             copy.Position = position;
             copy.IsBullet = body.IsBullet;
-            Add(copy);
+            BodyEx c = new BodyEx(copy);
+            c.Tex = b.Tex;
+            c.TexRect = b.TexRect;
+            c.TexPath = b.TexPath;
+            Add(c);
         }
     }
 }

@@ -76,12 +76,16 @@
     <Compile Include="Control\PhysicsInfoItem.cs" />
     <Compile Include="Control\RectControl.cs" />
     <Compile Include="Control\WorldHierachyRenderer.cs" />
+    <Compile Include="GameView\Views\SelectLevelView.cs" />
+    <Compile Include="GameView\Views\SettingsView.cs" />
     <Compile Include="Json\ColliderCategory.cs" />
     <Compile Include="Json\DisplayShape.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Json\GameScene.cs" />
     <Compile Include="GameView\Views\InGameView.cs" />
+    <Compile Include="Json\VideoSettings.cs" />
     <Compile Include="LevelEditor.cs" />
+    <Compile Include="Noise.cs" />
     <Compile Include="ParticleSystem\Emitter.cs" />
     <Compile Include="ParticleSystem\IndexedParticleSystem.cs" />
     <Compile Include="ParticleSystem\Particle.cs" />

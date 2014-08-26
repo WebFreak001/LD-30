@@ -1,4 +1,5 @@
-﻿using LudumDare.ParticleSystem;
+﻿using LudumDare.Control;
+using LudumDare.ParticleSystem;
 using SFML.Graphics;
 using SFML.Window;
 using sfml_ui;
@@ -11,9 +12,9 @@ namespace LudumDare.GameView.Views
     {
         private Scene scene;
 
-        public ButtonControl playButton;
-        public ButtonControl settingsButton;
-        public ButtonControl quitButton;
+        public FastButton playButton;
+        public FastButton settingsButton;
+        public FastButton quitButton;
         public IndexedParticleSystem particles;
         public Sprite particle;
         private Emitter particleEmitter;
@@ -26,7 +27,7 @@ namespace LudumDare.GameView.Views
         {
             scene = new Scene(ScrollInputs.None);
 
-            (playButton = new ButtonControl(new Font("Content/font.ttf"), 22, "Content/button.png", "Content/button_hover.png", "Content/button_pressed.png")
+            (playButton = new FastButton(new Font("Content/font.ttf"), 22, "Content/button.png", "Content/button_hover.png", "Content/button_pressed.png")
             {
                 Position = new Vector2f(500, 200),
                 Size = new Vector2f(280, 49),
@@ -34,7 +35,7 @@ namespace LudumDare.GameView.Views
                 Anchor = AnchorPoints.Left | AnchorPoints.Top
             }).OnClick += PlayButton_OnClick;
 
-            (settingsButton = new ButtonControl(new Font("Content/font.ttf"), 22, "Content/button.png", "Content/button_hover.png", "Content/button_pressed.png")
+            (settingsButton = new FastButton(new Font("Content/font.ttf"), 22, "Content/button.png", "Content/button_hover.png", "Content/button_pressed.png")
             {
                 Position = new Vector2f(500, 260),
                 Size = new Vector2f(280, 49),
@@ -42,7 +43,7 @@ namespace LudumDare.GameView.Views
                 Anchor = AnchorPoints.Left | AnchorPoints.Top
             }).OnClick += SettingsButton_OnClick;
 
-            (quitButton = new ButtonControl(new Font("Content/font.ttf"), 22, "Content/button.png", "Content/button_hover.png", "Content/button_pressed.png")
+            (quitButton = new FastButton(new Font("Content/font.ttf"), 22, "Content/button.png", "Content/button_hover.png", "Content/button_pressed.png")
             {
                 Position = new Vector2f(500, 320),
                 Size = new Vector2f(280, 49),
@@ -79,12 +80,12 @@ namespace LudumDare.GameView.Views
 
         private void PlayButton_OnClick(object sender, EventArgs e)
         {
-            Next(this, new InGameView("Content/Level1/LevelSave12.json"));
-            Dispose();
+            Next(this, new SelectLevelView(this));
         }
 
         private void SettingsButton_OnClick(object sender, EventArgs e)
         {
+            Next(this, new SettingsView(this));
         }
 
         private void QuitButton_OnClick(object sender, EventArgs e)

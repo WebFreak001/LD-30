@@ -1,10 +1,14 @@
 ﻿using LudumDare.GameView;
 using LudumDare.GameView.Views;
+using LudumDare.Json;
+using Newtonsoft.Json;
+using SFML.Audio;
 using SFML.Graphics;
 using SFML.Window;
 using sfml_ui;
 using System;
 using System.Diagnostics;
+using System.IO;
 
 namespace LudumDare
 {
@@ -13,6 +17,8 @@ namespace LudumDare
         private RenderWindow window;
         private UISceneManager ui;
         private IGameView view;
+
+        public static Music BGM;
 
         public Game()
         {
@@ -23,6 +29,7 @@ namespace LudumDare
             window = new RenderWindow(new VideoMode(1280, 720), "30", Styles.Close | Styles.Titlebar);
             window.Closed += window_Closed;
             window.Resized += window_Resized;
+            window.SetFramerateLimit(60);
 
             ui = new UISceneManager();
             ui.Init(window);
@@ -30,6 +37,21 @@ namespace LudumDare
 
             Stopwatch sw = new Stopwatch();
             TimeSpan elapsed = TimeSpan.Zero;
+
+            GameSettings settings;
+
+            if (File.Exists("settings.json"))
+                settings = JsonConvert.DeserializeObject<GameSettings>(File.ReadAllText("settings.json"));
+            else
+            {
+                settings = new GameSettings();
+                settings.EnableClouds = true;
+            }
+
+            BGM = new Music("Content/bgm.wav");
+            BGM.Loop = true;
+            BGM.Volume = settings.Volume;
+            BGM.Play();
 
             view = new MainMenuView();
             view.Next += view_Next;

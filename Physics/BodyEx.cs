@@ -16,8 +16,16 @@ namespace LudumDare.Physics
 
         public Dimension GameDimension;
         public Texture Tex;
+        public IntRect TexRect;
 
-        public BodyEx(Body body, string texture = "")
+        public string TexPath;
+
+        public BodyEx(Body body)
+            : this(body, "", new IntRect())
+        {
+        }
+
+        public BodyEx(Body body, string texture, IntRect rect)
         {
             GameDimension = LudumDare.Physics.Dimension.OneO;
             Body = body;
@@ -25,7 +33,11 @@ namespace LudumDare.Physics
             if (texture != "" && texture != null)
             {
                 Tex = new Texture(texture);
+                Tex.Repeated = true;
+                Tex.Smooth = true;
+                TexPath = texture;
                 Console.WriteLine("Texture Body: " + texture);
+                TexRect = rect;
             }
             if (body.UserData != null)
             {

@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16"
+   height="32"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="Neues Dokument 1">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="22.4"
+     inkscape:cx="43.742322"
+     inkscape:cy="-50.02725"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       dotted="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-1020.3622)">
+    <path
+       style="fill:#e0d1af;fill-opacity:1;stroke:none"
+       d="m -9.2857143,1026.6658 c 0,2.2842 0,6 0,8 0,4 -2.9999997,7 -6.9999997,7 -4,0 -7,-3.0315 -7,-7 0,-2 0,-5.6472 0,-8 0,-3.866 3.134006,-7 7,-7 3.865993,0 6.9999997,3.134 6.9999997,7 z"
+       id="path2987"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerStanding.png"
+       inkscape:export-xdpi="451.55551"
+       inkscape:export-ydpi="451.55551" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m -19.285714,1035.6658 c 0,0 0,3 0,5 0,2.2361 0,3 0,3"
+       id="path3758"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerStanding.png"
+       inkscape:export-xdpi="451.55551"
+       inkscape:export-ydpi="451.55551" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m -13.285714,1035.6658 c 0,0 0,3 0,5 0,2 0,3 0,3"
+       id="path3758-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerStanding.png"
+       inkscape:export-xdpi="451.55551"
+       inkscape:export-ydpi="451.55551" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m -26.285714,1035.6658 c 0,0 0.763932,-3.7639 3,-6 2,-2 4,-1 4,-1"
+       id="path3778"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerStanding.png"
+       inkscape:export-xdpi="451.55551"
+       inkscape:export-ydpi="451.55551" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m -6.2857143,1035.6658 c 0,0 0,-2 -2,-5 -1.56897,-2.3535 -3.9999997,-2 -3.9999997,-2"
+       id="path3778-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerStanding.png"
+       inkscape:export-xdpi="451.55551"
+       inkscape:export-ydpi="451.55551" />
+    <g
+       id="g3810"
+       transform="translate(-24.285714,-1.6964286)"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerStanding.png"
+       inkscape:export-xdpi="451.55551"
+       inkscape:export-ydpi="451.55551">
+      <path
+         sodipodi:end="6.2808349"
+         sodipodi:start="0"
+         transform="translate(0,1020.3622)"
+         d="M 11,7 C 11,8.1045695 10.104569,9 9,9 7.8954305,9 7,8.1045695 7,7 7,5.8954305 7.8954305,5 9,5 c 1.102734,0 1.997403,0.8925681 1.999994,1.9952992 L 9,7 z"
+         sodipodi:ry="2"
+         sodipodi:rx="2"
+         sodipodi:cy="7"
+         sodipodi:cx="9"
+         id="path3805"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3807"
+         d="m 10.267857,1027.3622 c 0,0.7002 -0.5676389,1.2679 -1.267857,1.2679 -0.7002181,0 -1.2678571,-0.5677 -1.2678571,-1.2679 0,-0.7002 0.567639,-1.2679 1.2678571,-1.2679 0.6990547,0 1.266211,0.5659 1.267854,1.2649 l -1.267854,0 z"
+         style="fill:#bfb295;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    </g>
+    <path
+       style="fill:none;stroke:#bfb295;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m -18.285714,1029.6658 c 0,0 1,1 3,1 2,0 3,-1 3,-1"
+       id="path3814"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="czc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerStanding.png"
+       inkscape:export-xdpi="451.55551"
+       inkscape:export-ydpi="451.55551" />
+    <path
+       style="fill:#e0d1af;fill-opacity:1;stroke:none"
+       d="m 41.441942,1027.8673 c 0,2.2843 0,6 0,8 0,4 -3,7 -7,7 -4,0 -7,-3.0314 -7,-7 0,-2 0,-5.6472 0,-8 0,-3.866 3.134007,-7 7,-7 3.865993,0 7,3.134 7,7 z"
+       id="path2987-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 31.441942,1036.8673 c 0,0 1,3 1,5 0,2.2361 -1,3 -1,3"
+       id="path3758-17"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 35.640793,1037.4802 c 0,0 1.892973,2.5331 2.522134,4.4315 0.629161,1.8985 -0.0055,3.1623 -0.0055,3.1623"
+       id="path3758-1-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 24.441942,1036.8673 c 0,0 0.763932,-3.7639 3,-6 2,-2 4,-1 4,-1"
+       id="path3778-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 44.441942,1036.8673 c 0,0 0,-2 -2,-5 -1.56897,-2.3535 -4,-2 -4,-2"
+       id="path3778-7-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc" />
+    <g
+       transform="translate(26.441942,-0.49492373)"
+       id="g3810-2">
+      <path
+         sodipodi:end="6.2808349"
+         sodipodi:start="0"
+         transform="translate(0,1020.3622)"
+         d="M 11,7 C 11,8.1045695 10.104569,9 9,9 7.8954305,9 7,8.1045695 7,7 7,5.8954305 7.8954305,5 9,5 c 1.102734,0 1.997403,0.8925681 1.999994,1.9952992 L 9,7 z"
+         sodipodi:ry="2"
+         sodipodi:rx="2"
+         sodipodi:cy="7"
+         sodipodi:cx="9"
+         id="path3805-7"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3807-6"
+         d="m 10.267857,1027.3622 c 0,0.7002 -0.5676389,1.2679 -1.267857,1.2679 -0.7002181,0 -1.2678571,-0.5677 -1.2678571,-1.2679 0,-0.7002 0.567639,-1.2679 1.2678571,-1.2679 0.6990547,0 1.266211,0.5659 1.267854,1.2649 l -1.267854,0 z"
+         style="fill:#bfb295;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    </g>
+    <path
+       style="fill:none;stroke:#bfb295;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 32.441942,1030.8673 c 0,0 1,1 3,1 2,0 3,-1 3,-1"
+       id="path3814-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="czc" />
+    <path
+       style="fill:#e0d1af;fill-opacity:1;stroke:none"
+       d="m 15.441942,1061.1097 c 0,2.2843 0,6 0,8 0,4 -3,7 -7,7 -4,0 -7,-3.0314 -7,-7 0,-2 0,-5.6472 0,-8 0,-3.866 3.134007,-7 7,-7 3.865993,0 7,3.134 7,7 z"
+       id="path2987-5-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk1.png"
+       inkscape:export-xdpi="454.6774"
+       inkscape:export-ydpi="454.6774" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 3.3643158,1070.7649 c 0,0 2.4606882,1.9862 3.5397968,3.6701 1.2065756,1.8826 0.7767929,3.0653 0.7767929,3.0653"
+       id="path3758-17-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk1.png"
+       inkscape:export-xdpi="454.6774"
+       inkscape:export-ydpi="454.6774" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 11.349548,1070.4034 c 0,0 0.750043,3.072 0.58569,5.0653 -0.164416,1.9932 -1.24315,2.9076 -1.24315,2.9076"
+       id="path3758-1-1-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk1.png"
+       inkscape:export-xdpi="454.6774"
+       inkscape:export-ydpi="454.6774" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m -1.558058,1070.1097 c 0,0 0.763932,-3.7639 3,-6 2,-2 4,-1 4,-1"
+       id="path3778-1-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:transform-center-x="1.058058"
+       inkscape:transform-center-y="3.1225"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk1.png"
+       inkscape:export-xdpi="454.6774"
+       inkscape:export-ydpi="454.6774" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 18.441942,1070.1097 c 0,0 0,-2 -2,-5 -1.56897,-2.3535 -4,-2 -4,-2"
+       id="path3778-7-5-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk1.png"
+       inkscape:export-xdpi="454.6774"
+       inkscape:export-ydpi="454.6774" />
+    <g
+       transform="translate(0.441942,32.747486)"
+       id="g3810-2-6"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk1.png"
+       inkscape:export-xdpi="454.6774"
+       inkscape:export-ydpi="454.6774">
+      <path
+         sodipodi:end="6.2808349"
+         sodipodi:start="0"
+         transform="translate(0,1020.3622)"
+         d="M 11,7 C 11,8.1045695 10.104569,9 9,9 7.8954305,9 7,8.1045695 7,7 7,5.8954305 7.8954305,5 9,5 c 1.102734,0 1.997403,0.8925681 1.999994,1.9952992 L 9,7 z"
+         sodipodi:ry="2"
+         sodipodi:rx="2"
+         sodipodi:cy="7"
+         sodipodi:cx="9"
+         id="path3805-7-8"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3807-6-5"
+         d="m 10.267857,1027.3622 c 0,0.7002 -0.5676389,1.2679 -1.267857,1.2679 -0.7002181,0 -1.2678571,-0.5677 -1.2678571,-1.2679 0,-0.7002 0.567639,-1.2679 1.2678571,-1.2679 0.6990547,0 1.266211,0.5659 1.267854,1.2649 l -1.267854,0 z"
+         style="fill:#bfb295;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    </g>
+    <path
+       style="fill:none;stroke:#bfb295;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 6.441942,1064.1097 c 0,0 1,1 3,1 2,0 3,-1 3,-1"
+       id="path3814-1-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="czc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk1.png"
+       inkscape:export-xdpi="454.6774"
+       inkscape:export-ydpi="454.6774" />
+    <path
+       style="fill:#e0d1af;fill-opacity:1;stroke:none"
+       d="m 70.779196,1061.7309 c 0,2.2843 0,6 0,8 0,4 -3,7 -7,7 -4,0 -7,-3.0314 -7,-7 0,-2 0,-5.6472 0,-8 0,-3.866 3.134007,-7 7,-7 3.865993,0 7,3.134 7,7 z"
+       id="path2987-5-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk3.png"
+       inkscape:export-xdpi="461.82141"
+       inkscape:export-ydpi="461.82141" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 63.362086,1071.2796 c 0,0 -1.071252,2.9753 -2.309063,4.5462 -1.383935,1.7564 -2.642183,1.7375 -2.642183,1.7375"
+       id="path3758-17-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk3.png"
+       inkscape:export-xdpi="461.82141"
+       inkscape:export-ydpi="461.82141" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 63.939236,1072.4738 c 0,0 2.916452,1.2224 4.421839,2.5391 1.505387,1.3168 1.59971,2.7278 1.59971,2.7278"
+       id="path3758-1-1-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk3.png"
+       inkscape:export-xdpi="461.82141"
+       inkscape:export-ydpi="461.82141" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 53.779196,1070.7309 c 0,0 0.763932,-3.7639 3,-6 2,-2 4,-1 4,-1"
+       id="path3778-1-9"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk3.png"
+       inkscape:export-xdpi="461.82141"
+       inkscape:export-ydpi="461.82141" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 73.779196,1070.7309 c 0,0 0,-2 -2,-5 -1.56897,-2.3535 -4,-2 -4,-2"
+       id="path3778-7-5-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk3.png"
+       inkscape:export-xdpi="461.82141"
+       inkscape:export-ydpi="461.82141" />
+    <g
+       transform="translate(55.779196,33.368679)"
+       id="g3810-2-7"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk3.png"
+       inkscape:export-xdpi="461.82141"
+       inkscape:export-ydpi="461.82141">
+      <path
+         sodipodi:end="6.2808349"
+         sodipodi:start="0"
+         transform="translate(0,1020.3622)"
+         d="M 11,7 C 11,8.1045695 10.104569,9 9,9 7.8954305,9 7,8.1045695 7,7 7,5.8954305 7.8954305,5 9,5 c 1.102734,0 1.997403,0.8925681 1.999994,1.9952992 L 9,7 z"
+         sodipodi:ry="2"
+         sodipodi:rx="2"
+         sodipodi:cy="7"
+         sodipodi:cx="9"
+         id="path3805-7-9"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3807-6-54"
+         d="m 10.267857,1027.3622 c 0,0.7002 -0.5676389,1.2679 -1.267857,1.2679 -0.7002181,0 -1.2678571,-0.5677 -1.2678571,-1.2679 0,-0.7002 0.567639,-1.2679 1.2678571,-1.2679 0.6990547,0 1.266211,0.5659 1.267854,1.2649 l -1.267854,0 z"
+         style="fill:#bfb295;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    </g>
+    <path
+       style="fill:none;stroke:#bfb295;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 61.779196,1064.7309 c 0,0 1,1 3,1 2,0 3,-1 3,-1"
+       id="path3814-1-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="czc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk3.png"
+       inkscape:export-xdpi="461.82141"
+       inkscape:export-ydpi="461.82141" />
+    <path
+       style="fill:#e0d1af;fill-opacity:1;stroke:none"
+       d="m 42.471457,1061.4457 c 0,2.2843 0,6 0,8 0,4 -3,7 -7,7 -4,0 -7,-3.0314 -7,-7 0,-2 0,-5.6472 0,-8 0,-3.866 3.134007,-7 7,-7 3.865993,0 7,3.134 7,7 z"
+       id="path2987-5-6-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk2.png"
+       inkscape:export-xdpi="461.82141"
+       inkscape:export-ydpi="461.82141" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 34.073622,1070.4261 c 0,0 -0.193632,3.1564 -0.941087,5.0114 -0.835682,2.0741 -2.048711,2.4089 -2.048711,2.4089"
+       id="path3758-17-1-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk2.png"
+       inkscape:export-xdpi="461.82141"
+       inkscape:export-ydpi="461.82141" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 35.115874,1073.0521 c 0,0 3.123903,0.491 4.900056,1.4104 1.776119,0.9194 2.204457,2.2671 2.204457,2.2671"
+       id="path3758-1-1-8-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk2.png"
+       inkscape:export-xdpi="461.82141"
+       inkscape:export-ydpi="461.82141" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 25.471457,1070.4457 c 0,0 0.763932,-3.7639 3,-6 2,-2 4,-1 4,-1"
+       id="path3778-1-9-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk2.png"
+       inkscape:export-xdpi="461.82141"
+       inkscape:export-ydpi="461.82141" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 45.471457,1070.4457 c 0,0 0,-2 -2,-5 -1.56897,-2.3535 -4,-2 -4,-2"
+       id="path3778-7-5-2-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk2.png"
+       inkscape:export-xdpi="461.82141"
+       inkscape:export-ydpi="461.82141" />
+    <g
+       transform="translate(27.471457,33.083485)"
+       id="g3810-2-7-1"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk2.png"
+       inkscape:export-xdpi="461.82141"
+       inkscape:export-ydpi="461.82141">
+      <path
+         sodipodi:end="6.2808349"
+         sodipodi:start="0"
+         transform="translate(0,1020.3622)"
+         d="M 11,7 C 11,8.1045695 10.104569,9 9,9 7.8954305,9 7,8.1045695 7,7 7,5.8954305 7.8954305,5 9,5 c 1.102734,0 1.997403,0.8925681 1.999994,1.9952992 L 9,7 z"
+         sodipodi:ry="2"
+         sodipodi:rx="2"
+         sodipodi:cy="7"
+         sodipodi:cx="9"
+         id="path3805-7-9-1"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3807-6-54-3"
+         d="m 10.267857,1027.3622 c 0,0.7002 -0.5676389,1.2679 -1.267857,1.2679 -0.7002181,0 -1.2678571,-0.5677 -1.2678571,-1.2679 0,-0.7002 0.567639,-1.2679 1.2678571,-1.2679 0.6990547,0 1.266211,0.5659 1.267854,1.2649 l -1.267854,0 z"
+         style="fill:#bfb295;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    </g>
+    <path
+       style="fill:none;stroke:#bfb295;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 33.471457,1064.4457 c 0,0 1,1 3,1 2,0 3,-1 3,-1"
+       id="path3814-1-3-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="czc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk2.png"
+       inkscape:export-xdpi="461.82141"
+       inkscape:export-ydpi="461.82141" />
+    <path
+       style="fill:#e0d1af;fill-opacity:1;stroke:none"
+       d="m 98.9042,1061.7488 c 0,2.2843 0,6 0,8 0,4 -3.000004,7 -7.000004,7 -4,0 -7,-3.0314 -7,-7 0,-2 0,-5.6472 0,-8 0,-3.866 3.134007,-7 7,-7 3.865993,0 7.000004,3.134 7.000004,7 z"
+       id="path2987-5-6-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk4.png"
+       inkscape:export-xdpi="457.59286"
+       inkscape:export-ydpi="457.59286" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 91.487086,1071.2975 c 0,0 -1.071252,2.9753 -2.309063,4.5462 -1.383935,1.7564 -2.642183,1.7375 -2.642183,1.7375"
+       id="path3758-17-1-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk4.png"
+       inkscape:export-xdpi="457.59286"
+       inkscape:export-ydpi="457.59286" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 91.375346,1071.0748 c 0,0 2.202521,2.2691 3.07022,4.0711 0.867659,1.802 0.400537,3.1368 0.400537,3.1368"
+       id="path3758-1-1-8-34"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk4.png"
+       inkscape:export-xdpi="457.59286"
+       inkscape:export-ydpi="457.59286" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 81.904196,1070.7488 c 0,0 0.763932,-3.7639 3,-6 2,-2 4,-1 4,-1"
+       id="path3778-1-9-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk4.png"
+       inkscape:export-xdpi="457.59286"
+       inkscape:export-ydpi="457.59286" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 101.9042,1070.7488 c 0,0 0,-2 -2,-5 -1.56897,-2.3535 -4.000004,-2 -4.000004,-2"
+       id="path3778-7-5-2-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk4.png"
+       inkscape:export-xdpi="457.59286"
+       inkscape:export-ydpi="457.59286" />
+    <g
+       transform="translate(83.904196,33.386557)"
+       id="g3810-2-7-0"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk4.png"
+       inkscape:export-xdpi="457.59286"
+       inkscape:export-ydpi="457.59286">
+      <path
+         sodipodi:end="6.2808349"
+         sodipodi:start="0"
+         transform="translate(0,1020.3622)"
+         d="M 11,7 C 11,8.1045695 10.104569,9 9,9 7.8954305,9 7,8.1045695 7,7 7,5.8954305 7.8954305,5 9,5 c 1.102734,0 1.997403,0.8925681 1.999994,1.9952992 L 9,7 z"
+         sodipodi:ry="2"
+         sodipodi:rx="2"
+         sodipodi:cy="7"
+         sodipodi:cx="9"
+         id="path3805-7-9-12"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3807-6-54-7"
+         d="m 10.267857,1027.3622 c 0,0.7002 -0.5676389,1.2679 -1.267857,1.2679 -0.7002181,0 -1.2678571,-0.5677 -1.2678571,-1.2679 0,-0.7002 0.567639,-1.2679 1.2678571,-1.2679 0.6990547,0 1.266211,0.5659 1.267854,1.2649 l -1.267854,0 z"
+         style="fill:#bfb295;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    </g>
+    <path
+       style="fill:none;stroke:#bfb295;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 89.904196,1064.7488 c 0,0 1,1 3,1 2,0 3,-1 3,-1"
+       id="path3814-1-3-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="czc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk4.png"
+       inkscape:export-xdpi="457.59286"
+       inkscape:export-ydpi="457.59286" />
+    <path
+       style="fill:#e0d1af;fill-opacity:1;stroke:none"
+       d="m 126.87597,1062.4963 c 0,2.2843 0,6 0,8 0,4 -3,7 -7,7 -4,0 -7,-3.0314 -7,-7 0,-2 0,-5.6472 0,-8 0,-3.866 3.134,-7 7,-7 3.86599,0 7,3.134 7,7 z"
+       id="path2987-5-6-7-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk5.png"
+       inkscape:export-xdpi="451.70517"
+       inkscape:export-ydpi="451.70517" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 115.64485,1074.2178 c 0,0 3.25066,1.0824 3.97027,3.1995 0.34756,1.0225 -2.07202,2.0211 -2.07202,2.0211"
+       id="path3758-17-1-3-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk5.png"
+       inkscape:export-xdpi="451.70517"
+       inkscape:export-ydpi="451.70517" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 119.41025,1071.8223 c 0,0 2.02188,2.3678 3.07022,4.0711 1.51953,2.4688 0.40053,3.1368 0.40053,3.1368"
+       id="path3758-1-1-8-34-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk5.png"
+       inkscape:export-xdpi="451.70517"
+       inkscape:export-ydpi="451.70517" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 109.9391,1071.4963 c 0,0 0.76393,-3.7639 3,-6 2,-2 4,-1 4,-1"
+       id="path3778-1-9-2-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk5.png"
+       inkscape:export-xdpi="451.70517"
+       inkscape:export-ydpi="451.70517" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 129.9391,1071.4963 c 0,0 0,-2 -2,-5 -1.56897,-2.3535 -4,-2 -4,-2"
+       id="path3778-7-5-2-2-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk5.png"
+       inkscape:export-xdpi="451.70517"
+       inkscape:export-ydpi="451.70517" />
+    <g
+       transform="translate(111.9391,34.134062)"
+       id="g3810-2-7-0-8"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk5.png"
+       inkscape:export-xdpi="451.70517"
+       inkscape:export-ydpi="451.70517">
+      <path
+         sodipodi:end="6.2808349"
+         sodipodi:start="0"
+         transform="translate(0,1020.3622)"
+         d="M 11,7 C 11,8.1045695 10.104569,9 9,9 7.8954305,9 7,8.1045695 7,7 7,5.8954305 7.8954305,5 9,5 c 1.102734,0 1.997403,0.8925681 1.999994,1.9952992 L 9,7 z"
+         sodipodi:ry="2"
+         sodipodi:rx="2"
+         sodipodi:cy="7"
+         sodipodi:cx="9"
+         id="path3805-7-9-12-4"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3807-6-54-7-7"
+         d="m 10.267857,1027.3622 c 0,0.7002 -0.5676389,1.2679 -1.267857,1.2679 -0.7002181,0 -1.2678571,-0.5677 -1.2678571,-1.2679 0,-0.7002 0.567639,-1.2679 1.2678571,-1.2679 0.6990547,0 1.266211,0.5659 1.267854,1.2649 l -1.267854,0 z"
+         style="fill:#bfb295;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    </g>
+    <path
+       style="fill:none;stroke:#bfb295;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 117.9391,1065.4963 c 0,0 1,1 3,1 2,0 3,-1 3,-1"
+       id="path3814-1-3-7-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="czc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk5.png"
+       inkscape:export-xdpi="451.70517"
+       inkscape:export-ydpi="451.70517" />
+    <path
+       style="fill:#e0d1af;fill-opacity:1;stroke:none"
+       d="m 151.87819,1064.2212 c 0,2.2843 0,6 0,8 0,4 -3,7 -7,7 -4,0 -7,-3.0314 -7,-7 0,-2 0,-5.6472 0,-8 0,-3.866 3.134,-7 7,-7 3.86599,0 7,3.134 7,7 z"
+       id="path2987-5-6-7-8-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk7.png"
+       inkscape:export-xdpi="451.80811"
+       inkscape:export-ydpi="451.80811" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 145.06079,1076.3991 c 0,0 2.15209,0.088 3.42513,1.9261 0.61483,0.8879 1.35476,2.4829 1.35476,2.4829"
+       id="path3758-17-1-3-2-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk7.png"
+       inkscape:export-xdpi="451.80811"
+       inkscape:export-ydpi="451.80811" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 143.58307,1073.2727 c 0,0 0.45515,3.0801 0.43848,5.0802 -0.0241,2.8987 -1.32703,2.8703 -1.32703,2.8703"
+       id="path3758-1-1-8-34-7-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk7.png"
+       inkscape:export-xdpi="451.80811"
+       inkscape:export-ydpi="451.80811" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 134.94132,1073.2212 c 0,0 0.76393,-3.7639 3,-6 2,-2 4,-1 4,-1"
+       id="path3778-1-9-2-2-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk7.png"
+       inkscape:export-xdpi="451.80811"
+       inkscape:export-ydpi="451.80811" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 154.94132,1073.2212 c 0,0 0,-2 -2,-5 -1.56897,-2.3535 -4,-2 -4,-2"
+       id="path3778-7-5-2-2-5-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk7.png"
+       inkscape:export-xdpi="451.80811"
+       inkscape:export-ydpi="451.80811" />
+    <g
+       transform="translate(136.94132,35.859038)"
+       id="g3810-2-7-0-8-7"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk7.png"
+       inkscape:export-xdpi="451.80811"
+       inkscape:export-ydpi="451.80811">
+      <path
+         sodipodi:end="6.2808349"
+         sodipodi:start="0"
+         transform="translate(0,1020.3622)"
+         d="M 11,7 C 11,8.1045695 10.104569,9 9,9 7.8954305,9 7,8.1045695 7,7 7,5.8954305 7.8954305,5 9,5 c 1.102734,0 1.997403,0.8925681 1.999994,1.9952992 L 9,7 z"
+         sodipodi:ry="2"
+         sodipodi:rx="2"
+         sodipodi:cy="7"
+         sodipodi:cx="9"
+         id="path3805-7-9-12-4-4"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3807-6-54-7-7-1"
+         d="m 10.267857,1027.3622 c 0,0.7002 -0.5676389,1.2679 -1.267857,1.2679 -0.7002181,0 -1.2678571,-0.5677 -1.2678571,-1.2679 0,-0.7002 0.567639,-1.2679 1.2678571,-1.2679 0.6990547,0 1.266211,0.5659 1.267854,1.2649 l -1.267854,0 z"
+         style="fill:#bfb295;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    </g>
+    <path
+       style="fill:none;stroke:#bfb295;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 142.94132,1067.2212 c 0,0 1,1 3,1 2,0 3,-1 3,-1"
+       id="path3814-1-3-7-3-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="czc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerWalk7.png"
+       inkscape:export-xdpi="451.80811"
+       inkscape:export-ydpi="451.80811" />
+    <path
+       style="fill:#e0d1af;fill-opacity:1;stroke:none"
+       d="m 68.779196,1098.7309 c 0,2.2843 0,6 0,8 0,4 -3,7 -7,7 -4,0 -7,-3.0314 -7,-7 0,-2 0,-5.6472 0,-8 0,-3.866 3.134007,-7 7,-7 3.865993,0 7,3.134 7,7 z"
+       id="path2987-5-6-18"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerFall.png"
+       inkscape:export-xdpi="469.78168"
+       inkscape:export-ydpi="469.78168" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 61.362086,1108.2796 c 0,0 -1.071252,2.9753 -2.309063,4.5462 -1.383935,1.7564 -2.642183,1.7375 -2.642183,1.7375"
+       id="path3758-17-1-35"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerFall.png"
+       inkscape:export-xdpi="469.78168"
+       inkscape:export-ydpi="469.78168" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 61.939236,1109.4738 c 0,0 2.916452,1.2224 4.421839,2.5391 1.505387,1.3168 1.59971,2.7278 1.59971,2.7278"
+       id="path3758-1-1-8-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerFall.png"
+       inkscape:export-xdpi="469.78168"
+       inkscape:export-ydpi="469.78168" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 52.00241,1094.7666 c 0,0 0.763932,3.7639 3,6 2,2 4,1 4,1"
+       id="path3778-1-9-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerFall.png"
+       inkscape:export-xdpi="469.78168"
+       inkscape:export-ydpi="469.78168" />
+    <path
+       style="fill:none;stroke:#e0d1af;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 72.00241,1094.7666 c 0,0 0,2 -2,5 -1.56897,2.3535 -4,2 -4,2"
+       id="path3778-7-5-2-47"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerFall.png"
+       inkscape:export-xdpi="469.78168"
+       inkscape:export-ydpi="469.78168" />
+    <g
+       transform="translate(53.779196,70.3687)"
+       id="g3810-2-7-6"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerFall.png"
+       inkscape:export-xdpi="469.78168"
+       inkscape:export-ydpi="469.78168">
+      <path
+         sodipodi:end="6.2808349"
+         sodipodi:start="0"
+         transform="translate(0,1020.3622)"
+         d="M 11,7 C 11,8.1045695 10.104569,9 9,9 7.8954305,9 7,8.1045695 7,7 7,5.8954305 7.8954305,5 9,5 c 1.102734,0 1.997403,0.8925681 1.999994,1.9952992 L 9,7 z"
+         sodipodi:ry="2"
+         sodipodi:rx="2"
+         sodipodi:cy="7"
+         sodipodi:cx="9"
+         id="path3805-7-9-8"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3807-6-54-2"
+         d="m 10.267857,1027.3622 c 0,0.7002 -0.5676389,1.2679 -1.267857,1.2679 -0.7002181,0 -1.2678571,-0.5677 -1.2678571,-1.2679 0,-0.7002 0.567639,-1.2679 1.2678571,-1.2679 0.6990547,0 1.266211,0.5659 1.267854,1.2649 l -1.267854,0 z"
+         style="fill:#bfb295;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    </g>
+    <path
+       style="fill:none;stroke:#bfb295;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 63,1101.3622 0,0"
+       id="path3814-1-3-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="D:\Documents\Visual Studio 2013\Projects\LD30\LudumDare\Content\playerFall.png"
+       inkscape:export-xdpi="469.78168"
+       inkscape:export-ydpi="469.78168" />
+  </g>
+</svg>
