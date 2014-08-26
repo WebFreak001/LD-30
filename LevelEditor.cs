@@ -41,7 +41,7 @@ namespace LudumDare
 
         public void Run()
         {
-            window = new RenderWindow(new VideoMode(1280, 720), "30 Editor", Styles.Titlebar | Styles.Close);
+            window = new RenderWindow(new VideoMode(1280, 720), "DOX30 Editor", Styles.Titlebar | Styles.Close);
             window.Closed += window_Closed;
             window.Resized += window_Resized;
             window.MouseWheelMoved += window_MouseWheelMoved;
@@ -248,25 +248,28 @@ namespace LudumDare
         {
             if ((e.Button == Mouse.Button.Left || e.Button == Mouse.Button.Right) && !contextMenu.IsOpen)
             {
-                Vector2f point = ((new Vector2f(e.X, e.Y) - offset - (new Vector2f(window.Size.X, window.Size.Y) * 0.5f))) * 0.1f;
-                Console.WriteLine(point);
-                AABB aabb = new AABB(new Vector2(point.X, point.Y), 1, 1);
-
-                world.world.QueryAABB((fix) =>
+                if (zoom == 1)
                 {
-                    var shape = fix.Shape;
-                    var pointB2 = new Vector2(point.X, point.Y);
-                    FarseerPhysics.Common.Transform transform;
-                    fix.Body.GetTransform(out transform);
-                    if (shape.TestPoint(ref transform, ref pointB2))
+                    Vector2f point = ((new Vector2f(e.X, e.Y) - offset - (new Vector2f(window.Size.X, window.Size.Y) * 0.5f))) * 0.1f;
+                    Console.WriteLine(point);
+                    AABB aabb = new AABB(new Vector2(point.X, point.Y), 1, 1);
+
+                    world.world.QueryAABB((fix) =>
                     {
-                        selected = fix.Body;
-                        Console.WriteLine("Selected");
-                        return false;
-                    }
-                    return true;
-                }, ref aabb);
-                dragging = true;
+                        var shape = fix.Shape;
+                        var pointB2 = new Vector2(point.X, point.Y);
+                        FarseerPhysics.Common.Transform transform;
+                        fix.Body.GetTransform(out transform);
+                        if (shape.TestPoint(ref transform, ref pointB2))
+                        {
+                            selected = fix.Body;
+                            Console.WriteLine("Selected");
+                            return false;
+                        }
+                        return true;
+                    }, ref aabb);
+                    dragging = true;
+                }
             }
             startClick = new Vector2f(0, 0);
         }
